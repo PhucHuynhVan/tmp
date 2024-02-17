@@ -1,0 +1,309 @@
+[
+  {
+    "parentname": "0",
+    "name": "Master Data",
+    "description": "Main menu",
+    "tag": "MasterData",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Stammdaten",
+    "description": "Main menu",
+    "tag": "MasterData",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Goods Incomming",
+    "description": "Main menu",
+    "tag": "GoodsIncomming",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Wareneingang",
+    "description": "Main menu",
+    "tag": "GoodsIncomming",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Others",
+    "description": "Main menu",
+    "tag": "Others",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Andere",
+    "description": "Main menu",
+    "tag": "Others",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Protocols",
+    "description": "Main menu",
+    "tag": "Protocols",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Protokolle",
+    "description": "Main menu",
+    "tag": "Protocols",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Reports",
+    "description": "Main menu",
+    "tag": "Reports",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "0",
+    "name": "Berichte",
+    "description": "Main menu",
+    "tag": "Reports",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "MasterData",
+    "name": "Article",
+    "description": "Master Data",
+    "tag": "Articles",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "MasterData",
+    "name": "Artikel",
+    "description": "Master Data",
+    "tag": "Articles",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "MasterData",
+    "name": "Threads",
+    "description": "Master Data",
+    "tag": "Threads",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "MasterData",
+    "name": "Themen",
+    "description": "Master Data",
+    "tag": "Threads",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "MasterData",
+    "name": "Parts",
+    "description": "Master Data",
+    "tag": "Parts",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "MasterData",
+    "name": "Teile",
+    "description": "Master Data",
+    "tag": "Parts",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "MasterData",
+    "name": "Supplier",
+    "description": "Master Data",
+    "tag": "Suppliers",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "MasterData",
+    "name": "Anbieter",
+    "description": "Master Data",
+    "tag": "Suppliers",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "GoodsIncomming",
+    "name": "Stock Threads",
+    "description": "Goods Incomming",
+    "tag": "StockThreads",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "GoodsIncomming",
+    "name": "Stock-Threads",
+    "description": "Goods Incomming",
+    "tag": "StockThreads",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "GoodsIncomming",
+    "name": "Stock Parts",
+    "description": "Goods Incomming",
+    "tag": "StockParts",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "GoodsIncomming",
+    "name": "Lagerteile",
+    "description": "Goods Incomming",
+    "tag": "StockParts",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "User Management",
+    "description": "Others",
+    "tag": "UserManagements",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "Benutzerverwaltung",
+    "description": "Others",
+    "tag": "UserManagements",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "User Groups",
+    "description": "Others",
+    "tag": "UserGroups",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "Benutzergruppen",
+    "description": "Others",
+    "tag": "UserGroups",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "Machine",
+    "description": "Others",
+    "tag": "Machines",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "Maschine",
+    "description": "Others",
+    "tag": "Machines",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "Bobbins",
+    "description": "Others",
+    "tag": "Bobbins",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "Spulen",
+    "description": "Others",
+    "tag": "Bobbins",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "Computer Configuration",
+    "description": "Others",
+    "tag": "ComputerConfigurations",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Others",
+    "name": "Computerkonfiguration",
+    "description": "Others",
+    "tag": "ComputerConfigurations",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Protocols",
+    "name": "Production Data",
+    "description": "Protocols",
+    "tag": "ProductionData",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "en",
+    "isactive": "true"
+  },
+  {
+    "parentname": "Protocols",
+    "name": "Produktionsdaten",
+    "description": "Protocols",
+    "tag": "ProductionData",
+    "iconimg": "Icons\\Button\\10.BMP",
+    "languages": "de",
+    "isactive": "true"
+  }
+]
+

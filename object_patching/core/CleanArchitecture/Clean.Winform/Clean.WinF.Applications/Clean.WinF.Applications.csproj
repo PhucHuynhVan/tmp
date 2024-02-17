@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Adapters\**" />
+    <Compile Remove="Email\**" />
+    <Compile Remove="Features\Systems\Log\**" />
+    <EmbeddedResource Remove="Adapters\**" />
+    <EmbeddedResource Remove="Email\**" />
+    <EmbeddedResource Remove="Features\Systems\Log\**" />
+    <None Remove="Adapters\**" />
+    <None Remove="Email\**" />
+    <None Remove="Features\Systems\Log\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Order\Services\" />
+    <Folder Include="Features\Protocol\Services\" />
+    <Folder Include="Features\Report\Services\" />
+    <Folder Include="Features\Setting\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="ClosedXML" Version="0.102.1" />
+    <PackageReference Include="EPPlus" Version="6.2.9" />
+    <PackageReference Include="Serilog" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clean.WinF.Domain\Clean.WinF.Domain.csproj" />
+    <ProjectReference Include="..\Clean.WinF.Shared\Clean.WinF.Common.csproj" />
+  </ItemGroup>
+
+</Project>

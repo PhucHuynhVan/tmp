@@ -1,0 +1,47 @@
+﻿using Clean.WinF.Applications.Features.UIProfile;
+
+namespace BiasysControl.UICommon
+{
+    public static class UIUtility
+    {
+        public static string userLogin = "";
+        public static IList<UIProfileDto> uiProfiles = new List<UIProfileDto>();
+        public static Form GetActiveFormOpenning(string formName)
+        {
+            Form frmActive = null;
+            FormCollection frmCollection = Application.OpenForms;
+            foreach (Form frm in frmCollection)
+            {
+                if (frm.Name.Trim().Equals(formName.Trim()))
+                {
+                    frmActive = frm;
+                    break;
+                }
+            }
+            return frmActive;
+        }
+
+        public static void AppShowMsg(string msg, string MsgboxInformation = "")
+        {
+            switch (MsgboxInformation)
+            {
+                case UIConstants.MSGBOX_ICON_WARNING_STYLE:
+                    MessageBox.Show(msg, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+                case UIConstants.MSGBOX_ICON_QUESTION_STYLE:
+                    MessageBox.Show(msg, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    break;
+                case UIConstants.MSGBOX_ICON_ERROR_STYLE:
+                    MessageBox.Show(msg, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case UIConstants.MSGBOX_ICON_INFORMATION_STYLE:
+                    MessageBox.Show(msg, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                default:
+                    MessageBox.Show(msg, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "code": "en",
+    "lang": "English",
+    "displaycode": "en",
+    "iconimg": "Icons\\Button\\10.BMP"
+  },
+  {
+    "code": "de",
+    "lang": "German",
+    "displaycode": "en",
+    "iconimg": "Icons\\Button\\10.BMP"
+  },
+  {
+    "code": "en",
+    "lang": "Englisch",
+    "displaycode": "de",
+    "iconimg": "Icons\\Button\\10.BMP"
+  },
+  {
+    "code": "de",
+    "lang": "Deutsch",
+    "displaycode": "de",
+    "iconimg": "Icons\\Button\\10.BMP"
+  }
+]

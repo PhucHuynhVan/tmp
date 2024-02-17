@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssemblyName>Clean.WinF.Domain</AssemblyName>
+    <RootNamespace>Clean.WinF.Domain</RootNamespace>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DbContexts\**" />
+    <Compile Remove="Entities\Log\**" />
+    <Compile Remove="Events\**" />
+    <Compile Remove="IServices\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Repository\**" />
+    <Compile Remove="SeedData\**" />
+    <Compile Remove="Services\**" />
+    <Compile Remove="Specifications\**" />
+    <EmbeddedResource Remove="DbContexts\**" />
+    <EmbeddedResource Remove="Entities\Log\**" />
+    <EmbeddedResource Remove="Events\**" />
+    <EmbeddedResource Remove="IServices\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Repository\**" />
+    <EmbeddedResource Remove="SeedData\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="Specifications\**" />
+    <None Remove="DbContexts\**" />
+    <None Remove="Entities\Log\**" />
+    <None Remove="Events\**" />
+    <None Remove="IServices\**" />
+    <None Remove="Models\**" />
+    <None Remove="Repository\**" />
+    <None Remove="SeedData\**" />
+    <None Remove="Services\**" />
+    <None Remove="Specifications\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Users\DistributionList.cs" />
+    <Compile Remove="Entities\Users\DistributionListGroup.cs" />
+    <Compile Remove="Enums\AuthenticateChallenge.cs" />
+    <Compile Remove="Enums\GroupRequest.cs" />
+    <Compile Remove="Enums\LdapType.cs" />
+    <Compile Remove="Enums\MessageReturnType.cs" />
+    <Compile Remove="Enums\PermissionEnum.cs" />
+    <Compile Remove="Enums\RoleStatus.cs" />
+    <Compile Remove="Enums\UserStatus.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clean.WinF.Shared\Clean.WinF.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+  </ItemGroup>
+
+</Project>

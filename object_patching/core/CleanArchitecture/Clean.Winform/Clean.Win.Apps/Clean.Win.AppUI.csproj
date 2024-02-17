@@ -1,0 +1,552 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <FileVersion>1.0.0.2</FileVersion>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CustomControls\**" />
+    <Compile Remove="Features\Bobbins\**" />
+    <Compile Remove="Features\GoodIncommings\**" />
+    <Compile Remove="Features\Helps\**" />
+    <Compile Remove="Features\Languages\**" />
+    <Compile Remove="Features\MasterData\**" />
+    <Compile Remove="Features\Others\**" />
+    <Compile Remove="Features\Reports\**" />
+    <Compile Remove="Logs\**" />
+    <Compile Remove="Users\**" />
+    <EmbeddedResource Remove="CustomControls\**" />
+    <EmbeddedResource Remove="Features\Bobbins\**" />
+    <EmbeddedResource Remove="Features\GoodIncommings\**" />
+    <EmbeddedResource Remove="Features\Helps\**" />
+    <EmbeddedResource Remove="Features\Languages\**" />
+    <EmbeddedResource Remove="Features\MasterData\**" />
+    <EmbeddedResource Remove="Features\Others\**" />
+    <EmbeddedResource Remove="Features\Reports\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <EmbeddedResource Remove="Users\**" />
+    <None Remove="CustomControls\**" />
+    <None Remove="Features\Bobbins\**" />
+    <None Remove="Features\GoodIncommings\**" />
+    <None Remove="Features\Helps\**" />
+    <None Remove="Features\Languages\**" />
+    <None Remove="Features\MasterData\**" />
+    <None Remove="Features\Others\**" />
+    <None Remove="Features\Reports\**" />
+    <None Remove="Logs\**" />
+    <None Remove="Users\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Properties\Resources.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="App.config" />
+    <None Remove="Icons\Button\0.bmp" />
+    <None Remove="Icons\Button\1.bmp" />
+    <None Remove="Icons\Button\10.BMP" />
+    <None Remove="Icons\Button\11.bmp" />
+    <None Remove="Icons\Button\12.bmp" />
+    <None Remove="Icons\Button\13.bmp" />
+    <None Remove="Icons\Button\2.bmp" />
+    <None Remove="Icons\Button\3.bmp" />
+    <None Remove="Icons\Button\4.bmp" />
+    <None Remove="Icons\Button\5.bmp" />
+    <None Remove="Icons\Button\6.bmp" />
+    <None Remove="Icons\Button\7.BMP" />
+    <None Remove="Icons\Button\language.png" />
+    <None Remove="Icons\Device.contrast-white.ico" />
+    <None Remove="Icons\FreeIcons\Accept.png" />
+    <None Remove="Icons\FreeIcons\Add.png" />
+    <None Remove="Icons\FreeIcons\Application_edit.png" />
+    <None Remove="Icons\FreeIcons\Application_get.png" />
+    <None Remove="Icons\FreeIcons\Application_view_icons.png" />
+    <None Remove="Icons\FreeIcons\Attach.png" />
+    <None Remove="Icons\FreeIcons\Basket_put.png" />
+    <None Remove="Icons\FreeIcons\Bin.png" />
+    <None Remove="Icons\FreeIcons\Bin_closed.png" />
+    <None Remove="Icons\FreeIcons\Bin_empty.png" />
+    <None Remove="Icons\FreeIcons\Book-silk.png" />
+    <None Remove="Icons\FreeIcons\Book_add.png" />
+    <None Remove="Icons\FreeIcons\Bug-silk.png" />
+    <None Remove="Icons\FreeIcons\Calculator_add.png" />
+    <None Remove="Icons\FreeIcons\Calendar-silk.png" />
+    <None Remove="Icons\FreeIcons\Calendar_view_month.png" />
+    <None Remove="Icons\FreeIcons\Cancel.png" />
+    <None Remove="Icons\FreeIcons\Chart_bar.png" />
+    <None Remove="Icons\FreeIcons\Clock.png" />
+    <None Remove="Icons\FreeIcons\Cog.png" />
+    <None Remove="Icons\FreeIcons\Cog_add.png" />
+    <None Remove="Icons\FreeIcons\Coins_add.png" />
+    <None Remove="Icons\FreeIcons\Cut_red.png" />
+    <None Remove="Icons\FreeIcons\Database_refresh.png" />
+    <None Remove="Icons\FreeIcons\Date-Silk.png" />
+    <None Remove="Icons\FreeIcons\Delete-silk.png" />
+    <None Remove="Icons\FreeIcons\Disconnect.png" />
+    <None Remove="Icons\FreeIcons\Disk.png" />
+    <None Remove="Icons\FreeIcons\Disk_multiple.png" />
+    <None Remove="Icons\FreeIcons\Email_go.png" />
+    <None Remove="Icons\FreeIcons\Exclamation.png" />
+    <None Remove="Icons\FreeIcons\Find.png" />
+    <None Remove="Icons\FreeIcons\Flag_blue.png" />
+    <None Remove="Icons\FreeIcons\Flag_green.png" />
+    <None Remove="Icons\FreeIcons\Folder_add.png" />
+    <None Remove="Icons\FreeIcons\Folder_user.png" />
+    <None Remove="Icons\FreeIcons\Group.png" />
+    <None Remove="Icons\FreeIcons\Group_add.png" />
+    <None Remove="Icons\FreeIcons\Group_delete.png" />
+    <None Remove="Icons\FreeIcons\Group_edit.png" />
+    <None Remove="Icons\FreeIcons\Group_error.png" />
+    <None Remove="Icons\FreeIcons\Help.png" />
+    <None Remove="Icons\FreeIcons\Key.png" />
+    <None Remove="Icons\FreeIcons\Key_add.png" />
+    <None Remove="Icons\FreeIcons\Key_go.png" />
+    <None Remove="Icons\FreeIcons\Lightbulb.png" />
+    <None Remove="Icons\FreeIcons\Lightning-silk.png" />
+    <None Remove="Icons\FreeIcons\Link.png" />
+    <None Remove="Icons\FreeIcons\Lock.png" />
+    <None Remove="Icons\FreeIcons\Magnifier.png" />
+    <None Remove="Icons\FreeIcons\Monitor.png" />
+    <None Remove="Icons\FreeIcons\Page.png" />
+    <None Remove="Icons\FreeIcons\Page_add.png" />
+    <None Remove="Icons\FreeIcons\Page_copy.png" />
+    <None Remove="Icons\FreeIcons\Page_delete.png" />
+    <None Remove="Icons\FreeIcons\Page_edit.png" />
+    <None Remove="Icons\FreeIcons\Page_excel.png" />
+    <None Remove="Icons\FreeIcons\Page_find.png" />
+    <None Remove="Icons\FreeIcons\Page_gear.png" />
+    <None Remove="Icons\FreeIcons\Page_white_acrobat.png" />
+    <None Remove="Icons\FreeIcons\Page_white_delete.png" />
+    <None Remove="Icons\FreeIcons\Page_white_excel.png" />
+    <None Remove="Icons\FreeIcons\Phone.png" />
+    <None Remove="Icons\FreeIcons\Photo_icon.png" />
+    <None Remove="Icons\FreeIcons\Pill.png" />
+    <None Remove="Icons\FreeIcons\Plugin.png" />
+    <None Remove="Icons\FreeIcons\Printer.png" />
+    <None Remove="Icons\FreeIcons\Printer_empty.png" />
+    <None Remove="Icons\FreeIcons\Silk_arrow_refresh.png" />
+    <None Remove="Icons\FreeIcons\Silk_arrow_refresh_small.png" />
+    <None Remove="Icons\FreeIcons\Silk_arrow_rotate_anticlockwise.png" />
+    <None Remove="Icons\FreeIcons\Silk_arrow_rotate_clockwise.png" />
+    <None Remove="Icons\FreeIcons\Silk_arrow_undo.png" />
+    <None Remove="Icons\FreeIcons\Silk_cross.png" />
+    <None Remove="Icons\FreeIcons\Silk_magnifier_icon.png" />
+    <None Remove="Icons\FreeIcons\Silk_tick.png" />
+    <None Remove="Icons\FreeIcons\Silk_Wrench.png" />
+    <None Remove="Icons\FreeIcons\Star.png" />
+    <None Remove="Icons\FreeIcons\Table_gear.png" />
+    <None Remove="Icons\FreeIcons\Tux_icon.png" />
+    <None Remove="Icons\FreeIcons\User.png" />
+    <None Remove="Icons\FreeIcons\User_add.png" />
+    <None Remove="Icons\FreeIcons\World.png" />
+    <None Remove="Icons\sewing\sewing.png" />
+    <None Remove="Icons\sewing\sewing1.png" />
+    <None Remove="Icons\sewing\sewing2.png" />
+    <None Remove="Icons\sewing\sewing3.png" />
+    <None Remove="Icons\sewing\sewing4.png" />
+    <None Remove="Icons\sewing\sewing5.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\0.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\1.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\10.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\11.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\12.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\13.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\3.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\4.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\5.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\6.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\7.BMP">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Button\language.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Device.contrast-white.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Accept.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Application_edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Application_get.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Application_view_icons.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Attach.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Basket_put.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Bin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Bin_closed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Bin_empty.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Book-silk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Book_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Bug-silk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Calculator_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Calendar-silk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Calendar_view_month.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Cancel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Chart_bar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Clock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Cog.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Cog_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Coins_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Cut_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Database_refresh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Date-Silk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Delete-silk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Disconnect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Disk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Disk_multiple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Email_go.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Exclamation.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Find.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Flag_blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Flag_green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Folder_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Folder_user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Group.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Group_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Group_delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Group_edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Group_error.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Help.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Key.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Key_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Key_go.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Lightbulb.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Lightning-silk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Link.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Magnifier.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Monitor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_copy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_excel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_find.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_gear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_white_acrobat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_white_delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Page_white_excel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Phone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Photo_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Pill.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Plugin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Printer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Printer_empty.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_arrow_refresh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_arrow_refresh_small.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_arrow_rotate_anticlockwise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_arrow_rotate_clockwise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_arrow_undo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_cross.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_magnifier_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_tick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Silk_Wrench.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Table_gear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\Tux_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\User.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\User_add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\FreeIcons\World.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\sewing\sewing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\sewing\sewing1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\sewing\sewing2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\sewing\sewing3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\sewing\sewing4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\sewing\sewing5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clean.WinF.Infrastructure\Clean.WinF.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Serilog" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.SQLite" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Icons\Button\label.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\change.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\createnew.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\0cs1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\0cs2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\1cs1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\1cs2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\1cs3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\2cs41.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\2cs42.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\2cs43.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\3cs1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\3cs2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\3cs41.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\3cs42.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\3cs43.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\custom1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\custom2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\SeamProfile\custom3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\sewing\sewing6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "BiasysControl_sewing",
+    "description": "BiasysControl_sewing",
+    "issread": "1",
+    "isinserted": "1",
+    "isdeleted": "1",
+    "isexecuted": "1",
+    "UserGroupID": "1"
+  },
+  {
+    "name": "BiasysDB_Form_Thread",
+    "description": "BiasysDB_Form_Thread",
+    "issread": "1",
+    "isinserted": "1",
+    "isdeleted": "1",
+    "isexecuted": "1",
+    "UserGroupID": "1"
+  },
+  {
+    "name": "BiasysDB_Form_Parts",
+    "description": "BiasysDB_Form_Parts",
+    "issread": "1",
+    "isinserted": "1",
+    "isdeleted": "1",
+    "isexecuted": "1",
+    "UserGroupID": "1"
+  },
+  {
+    "name": "BiasysDB_Form_Suppliers",
+    "description": "BiasysDB_Form_Suppliers",
+    "issread": "1",
+    "isinserted": "1",
+    "isdeleted": "1",
+    "isexecuted": "1",
+    "UserGroupID": "1"
+  },
+  {
+    "name": "BiasysDB_Form_Articles",
+    "description": "BiasysDB_Form_Articles",
+    "issread": "1",
+    "isinserted": "1",
+    "isdeleted": "1",
+    "isexecuted": "1",
+    "UserGroupID": "1"
+  },
+  {
+    "name": "BiasysDB_Users_Management",
+    "description": "BiasysDB_Users_Management",
+    "issread": "1",
+    "isinserted": "1",
+    "isdeleted": "1",
+    "isexecuted": "1",
+    "UserGroupID": "1"
+  }
+]

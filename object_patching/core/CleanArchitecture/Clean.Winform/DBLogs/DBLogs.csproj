@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clean.WinF.Applications\Clean.WinF.Applications.csproj" />
+    <ProjectReference Include="..\Clean.WinF.Domain\Clean.WinF.Domain.csproj" />
+    <ProjectReference Include="..\Clean.WinF.Infrastructure\Clean.WinF.Infrastructure.csproj" />
+    <ProjectReference Include="..\Clean.WinF.Shared\Clean.WinF.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Icons\" />
+  </ItemGroup>
+
+</Project>
