@@ -49,6 +49,7 @@ namespace BiasysControl
             pnlContent = new Panel();
             pnlRightContent = new Panel();
             pnlLeftMenu = new Panel();
+            picAccount = new PictureBox();
             btnQuitApp = new Button();
             btnRestartApp = new Button();
             btnStandardSewing = new Button();
@@ -67,6 +68,7 @@ namespace BiasysControl
             pnlTitle.SuspendLayout();
             pnlContent.SuspendLayout();
             pnlLeftMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picAccount).BeginInit();
             SuspendLayout();
             // 
             // statusTripBottom
@@ -214,6 +216,7 @@ namespace BiasysControl
             // 
             pnlLeftMenu.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pnlLeftMenu.BorderStyle = BorderStyle.FixedSingle;
+            pnlLeftMenu.Controls.Add(picAccount);
             pnlLeftMenu.Controls.Add(btnQuitApp);
             pnlLeftMenu.Controls.Add(btnRestartApp);
             pnlLeftMenu.Controls.Add(btnStandardSewing);
@@ -231,6 +234,16 @@ namespace BiasysControl
             pnlLeftMenu.Name = "pnlLeftMenu";
             pnlLeftMenu.Size = new Size(225, 621);
             pnlLeftMenu.TabIndex = 0;
+            // 
+            // picAccount
+            // 
+            picAccount.Image = (Image)resources.GetObject("picAccount.Image");
+            picAccount.Location = new Point(8, 8);
+            picAccount.Name = "picAccount";
+            picAccount.Size = new Size(207, 223);
+            picAccount.TabIndex = 12;
+            picAccount.TabStop = false;
+            picAccount.Visible = false;
             // 
             // btnQuitApp
             // 
@@ -254,8 +267,7 @@ namespace BiasysControl
             // 
             // btnStandardSewing
             // 
-            btnStandardSewing.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnStandardSewing.Location = new Point(15, 453);
+            btnStandardSewing.Location = new Point(15, 454);
             btnStandardSewing.Name = "btnStandardSewing";
             btnStandardSewing.Size = new Size(192, 50);
             btnStandardSewing.TabIndex = 9;
@@ -263,11 +275,12 @@ namespace BiasysControl
             // 
             // btn02
             // 
-            btn02.Location = new Point(113, 438);
+            btn02.Location = new Point(113, 453);
             btn02.Name = "btn02";
             btn02.Size = new Size(94, 29);
             btn02.TabIndex = 8;
             btn02.UseVisualStyleBackColor = true;
+            btn02.Visible = false;
             // 
             // btn01
             // 
@@ -276,10 +289,11 @@ namespace BiasysControl
             btn01.Size = new Size(94, 29);
             btn01.TabIndex = 8;
             btn01.UseVisualStyleBackColor = true;
+            btn01.Visible = false;
             // 
             // btnNewArticleAndOrder
             // 
-            btnNewArticleAndOrder.Location = new Point(15, 385);
+            btnNewArticleAndOrder.Location = new Point(15, 400);
             btnNewArticleAndOrder.Name = "btnNewArticleAndOrder";
             btnNewArticleAndOrder.Size = new Size(192, 50);
             btnNewArticleAndOrder.TabIndex = 7;
@@ -287,15 +301,16 @@ namespace BiasysControl
             // 
             // btnNewSeam
             // 
-            btnNewSeam.Location = new Point(15, 332);
+            btnNewSeam.Location = new Point(15, 347);
             btnNewSeam.Name = "btnNewSeam";
             btnNewSeam.Size = new Size(192, 50);
             btnNewSeam.TabIndex = 6;
             btnNewSeam.UseVisualStyleBackColor = true;
+            btnNewSeam.Visible = false;
             // 
             // btnReprint
             // 
-            btnReprint.Location = new Point(15, 279);
+            btnReprint.Location = new Point(15, 346);
             btnReprint.Name = "btnReprint";
             btnReprint.Size = new Size(192, 50);
             btnReprint.TabIndex = 5;
@@ -303,7 +318,7 @@ namespace BiasysControl
             // 
             // btnNewNeedle
             // 
-            btnNewNeedle.Location = new Point(15, 226);
+            btnNewNeedle.Location = new Point(15, 293);
             btnNewNeedle.Name = "btnNewNeedle";
             btnNewNeedle.Size = new Size(192, 50);
             btnNewNeedle.TabIndex = 4;
@@ -311,15 +326,16 @@ namespace BiasysControl
             // 
             // btnChangeStitchLength
             // 
-            btnChangeStitchLength.Location = new Point(15, 173);
+            btnChangeStitchLength.Location = new Point(15, 292);
             btnChangeStitchLength.Name = "btnChangeStitchLength";
             btnChangeStitchLength.Size = new Size(192, 50);
             btnChangeStitchLength.TabIndex = 3;
             btnChangeStitchLength.UseVisualStyleBackColor = true;
+            btnChangeStitchLength.Visible = false;
             // 
             // btnWindingBobbin
             // 
-            btnWindingBobbin.Location = new Point(15, 119);
+            btnWindingBobbin.Location = new Point(15, 238);
             btnWindingBobbin.Name = "btnWindingBobbin";
             btnWindingBobbin.Size = new Size(192, 50);
             btnWindingBobbin.TabIndex = 2;
@@ -332,6 +348,7 @@ namespace BiasysControl
             btnChangeBobbin.Size = new Size(192, 50);
             btnChangeBobbin.TabIndex = 1;
             btnChangeBobbin.UseVisualStyleBackColor = true;
+            btnChangeBobbin.Visible = false;
             // 
             // btnChangeNeedleThread
             // 
@@ -340,6 +357,7 @@ namespace BiasysControl
             btnChangeNeedleThread.Size = new Size(192, 50);
             btnChangeNeedleThread.TabIndex = 0;
             btnChangeNeedleThread.UseVisualStyleBackColor = true;
+            btnChangeNeedleThread.Visible = false;
             // 
             // MainForm
             // 
@@ -369,6 +387,7 @@ namespace BiasysControl
             pnlTitle.PerformLayout();
             pnlContent.ResumeLayout(false);
             pnlLeftMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picAccount).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -405,5 +424,6 @@ namespace BiasysControl
         public Button btnRestartApp;
         public Panel pnlRightContent;
         public Label lblTitle2;
+        public PictureBox picAccount;
     }
 }

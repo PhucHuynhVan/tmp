@@ -198,8 +198,8 @@ namespace BiasysControl
         {
             try
             {
-                lblTitle2.Left = (pnlTitle.Width / 2) - (lblTitle.Width / 2);
-                lblTitle.Left = (pnlTitle.Width / 2) - (lblTitle.Width / 2);
+                lblTitle2.Left = (pnlTitle.Width / 2); //- (lblTitle.Width / 2);
+                lblTitle.Left = (pnlTitle.Width / 2); //- (lblTitle.Width / 2);
                 uiCommon.DisplayInitialAppInformation(this);
                 InitializeMultiLanguages();
                 var encryptKey = ConfigurationManager.AppSettings[AppConfigurationConstants.AppsettingEncryptionKey];
@@ -470,7 +470,7 @@ namespace BiasysControl
 
         private void MainForm_ResizeEnd(object sender, EventArgs e)
         {
-            if (this.Height < 839 || this.Width < 1447)
+            if (this.Height < 839 || this.Width < 1447)//standard screen size
             {
                 this.Height = 839;
                 this.Width = 1447;
@@ -521,6 +521,9 @@ namespace BiasysControl
             this.lblTitle.ForeColor = Color.Red;
             this.lblTitle2.Visible = true;
             this.lblTitle.Text = msg2;
+            lblTitle2.Left = (pnlTitle.Width / 2) - (lblTitle.Width / 2);
+            lblTitle.Left = (pnlTitle.Width / 2) - (lblTitle.Width / 2);
+            picAccount.Visible = true;
         }
 
         private void btnQuitApp_Click(object sender, EventArgs e)
