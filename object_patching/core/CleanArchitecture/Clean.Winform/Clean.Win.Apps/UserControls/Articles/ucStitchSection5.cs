@@ -1,5 +1,11 @@
 ﻿using Clean.WinF.Applications.Features.Article.DTOs;
+using Clean.WinF.Shared.Constants;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Clean.WinF.Applications.Features.Part.DTOs;
 
 namespace Clean.Win.AppUI.UserControls.Articles
 {
@@ -224,6 +230,47 @@ namespace Clean.Win.AppUI.UserControls.Articles
 
                 OnDataChange.Invoke();
             }
+        }
+
+        private string GetByasControlParameterMockData()
+        {
+            return "ByasControl_Param1,ByasControl_Param2,ByasControl_Param3,ByasControl_Param4" ;            
+        }
+
+        private string[] GetByasControlParametersArgumentsMockData()
+        {
+            return new List<string>() { "ByasControl_Param1","ByasControl_Param2","ByasControl_Param3","ByasControl_Param4", "ByasControl_Param5" }.ToArray();
+        }
+
+        //Define whatever here
+        private string[] GetByasControlObjectParametersMockData()
+        {
+            var args = new List<string>();           
+            args.Add(JsonConvert.SerializeObject(new ArticleDto() { Code = "1", Description = "Article 1" }));
+            //args.Add(JsonConvert.SerializeObject(new ArticleDto() { Code = "2", Description = "Article 2" }));
+            //args.Add(JsonConvert.SerializeObject(new ArticleDto() { Code = "3", Description = "Article 3" }));
+            //args.Add(JsonConvert.SerializeObject(new ArticleDto() { Code = "4", Description = "Article 4" }));
+            //args.Add(JsonConvert.SerializeObject(new ArticleDto() { Code = "5", Description = "Article 5" }));
+            args.Add(JsonConvert.SerializeObject(new PartDto() { Code = " Code 1", Name = "Part 1" }));
+            //args.Add(JsonConvert.SerializeObject(new PartDto() { Code = " Code 2", Name = "Part 2" }));
+            //args.Add(JsonConvert.SerializeObject(new PartDto() { Code = " Code 3", Name = "Part 3" }));
+            //args.Add(JsonConvert.SerializeObject(new PartDto() { Code = " Code 4", Name = "Part 4" }));            
+            args.Add(JsonConvert.SerializeObject(new AutomatDto() { ID = 1, Code = "1", Name = "Automat 1" }));
+            //args.Add(JsonConvert.SerializeObject(new AutomatDto() { ID = 1, Code = "2", Name = "Automat 2" }));
+            //args.Add(JsonConvert.SerializeObject(new AutomatDto() { ID = 1, Code = "3", Name = "Automat 3" }));
+            return args.ToArray();
+        }
+
+        private void btnByascontrol_Click(object sender, System.EventArgs e)
+        {
+            //Get current ByasControlApp path value from configuration file
+            var biasysControlPath = ConfigurationManager.AppSettings[AppConfigurationConstants.AppsettingBiasysControlPath];
+            
+            //by passing with array string value
+            //Process.Start(biasysControlPath, GetByasControlParametersArgumentsMockData());
+
+            //by passing with objects value
+            Process.Start(biasysControlPath, GetByasControlObjectParametersMockData());
         }
     }
 }

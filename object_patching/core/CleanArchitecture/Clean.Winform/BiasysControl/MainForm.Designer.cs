@@ -298,6 +298,7 @@ namespace BiasysControl
             btnNewArticleAndOrder.Size = new Size(192, 50);
             btnNewArticleAndOrder.TabIndex = 7;
             btnNewArticleAndOrder.UseVisualStyleBackColor = true;
+            btnNewArticleAndOrder.Click += btnNewArticleAndOrder_Click;
             // 
             // btnNewSeam
             // 
@@ -393,17 +394,17 @@ namespace BiasysControl
         }
 
         #endregion
-        private System.Windows.Forms.StatusStrip statusTripBottom;
-        private System.Windows.Forms.ToolStripStatusLabel lblComputer;
-        private System.Windows.Forms.ToolStripStatusLabel lblUserLogin;
-        private System.Windows.Forms.ToolStripStatusLabel lblSeparator1;
-        private System.Windows.Forms.ToolStripStatusLabel lblSeparator3;
-        private System.Windows.Forms.ToolStripStatusLabel lblCurrentTime;
-        private System.Windows.Forms.ImageList imgLeftMenuList;
-        private System.Windows.Forms.ToolStripStatusLabel lblLicense;
+        private StatusStrip statusTripBottom;
+        private ToolStripStatusLabel lblComputer;
+        private ToolStripStatusLabel lblUserLogin;
+        private ToolStripStatusLabel lblSeparator1;
+        private ToolStripStatusLabel lblSeparator3;
+        private ToolStripStatusLabel lblCurrentTime;
+        private ImageList imgLeftMenuList;
+        private ToolStripStatusLabel lblLicense;
         public System.Windows.Forms.Timer timerNow;
-        private System.Windows.Forms.ToolStripStatusLabel lblSpaceStatus;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel lblSpaceStatus;
+        private ToolStripStatusLabel toolStripStatusLabel1;
         private Panel pnlTopControl;
         private Panel pnlContent;
         private Panel pnlLeftMenu;

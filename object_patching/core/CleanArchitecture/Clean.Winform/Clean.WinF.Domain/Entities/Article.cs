@@ -141,6 +141,29 @@ namespace Clean.WinF.Domain.Entities
         public string MiscellaneousInfo6 { get; set; }
         public string MiscellaneousInfo7 { get; set; }
 
+        public string BacktackStartFreeSeamForward { get; set; }
+        public string BacktackStartFreeSeamBackward { get; set; }
+
+        public string BacktackEndFreeSeamForward { get; set; }
+        public string BacktackEndFreeSeamBackward { get; set; }
+
+        public string BacktackStartSABSeamForward { get; set; }
+        public string BacktackStartSABSeamBackward { get; set; }
+
+        public string BacktackEndSABSeamForward { get; set; }
+        public string BacktackEndSABSeamBackward { get; set; }
+
+
+        public string BacktackStartEndlabelSeamForward { get; set; }
+        public string BacktackStartEndlabelSeamBackward { get; set; }
+
+        public string BacktackEndEndlabelSeamForward { get; set; }
+        public string BacktackEndEndlabelSeamBackward { get; set; }
+
+        public string MonitoringFreeSeam { get; set; }
+        public string MonitoringSeaction1 { get; set; }
+        public string MonitoringSeaction3 { get; set; }
+        public string MonitoringEndlabelSeam { get; set; }
 
     }
 }

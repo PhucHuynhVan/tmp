@@ -1,4 +1,7 @@
 ﻿using BiasysControl.UICommon;
+using Clean.WinF.Applications.Features.Article.DTOs;
+using Clean.WinF.Domain.Entities;
+using DocumentFormat.OpenXml.EMMA;
 
 namespace BiasysControl.Features.Order
 {
@@ -8,6 +11,13 @@ namespace BiasysControl.Features.Order
         MainForm _mainForm = null;
         private readonly BiasysControl.UICommon.UICommon uiCommon = BiasysControl.UICommon.UICommon.Instance;
         int countArticlePartNumber = 0;
+
+        public ArticleDto article;
+        private List<String> parts = new List<String>();
+        private int currentPartIdx = 0;
+        private int lastPartIdx = 0;
+
+        private bool numOfPiece = false;
 
         public OrderNumberInput(MainForm mainForm)
         {
@@ -41,38 +51,96 @@ namespace BiasysControl.Features.Order
                 if (ucContent != null)
                 {
                     var nameOfControl = string.Concat("txtArticleInfo", countArticlePartNumber.ToString());
-                    SetArticlePartNumberValue(ucContent, nameOfControl, txtOrderNumber.Text);
-                    countArticlePartNumber++;
-                    txtOrderNumber.Text = string.Empty;
-                    if (countArticlePartNumber > GetArticleNumberMockData())
-                    {
-                        this.Text = "Part number";
-                        this.lblBobbinNumber.Text = "Enter/scan part number";
-                        this.txtPartNumber.Text = string.Empty;
-                        this.txtPartNumber.Visible = true;
-                        this.txtOrderNumber.Visible = false;
-                        countArticlePartNumber = 0;
+                    String articleCode = txtOrderNumber.Text;
+                    this._mainForm.updateArticleInfo(articleCode, this);
+
+                    //int partCount = 0;
+                    parts.Add(article.FabricLeather1MaterialCode);
+                    parts.Add(article.FabricLeather2MaterialCode);
+                    parts.Add(article.FabricLeather3MaterialCode);
+                    parts.Add(article.FabricLeather4MaterialCode);
+                    parts.Add(article.FabricLeather5MaterialCode);
+
+                    for(int i = 0; i < parts.Count; i++) {
+                        if (parts[i] != null) {
+                            lastPartIdx = i;
+                        }
                     }
+                    //MessageBox.Show("Parts size " + parts.Count + " - " + article.FabricLeather1MaterialCode);
+
+                    SetArticlePartNumberValue(ucContent, nameOfControl, articleCode);
+
+                    //this.Text = "Part number";
+                    this.lblBobbinNumber.Text = "Enter/scan part";
+                    this.txtPartNumber.Text = string.Empty;
+                    this.txtPartNumber.Visible = true;
+                    this.txtOrderNumber.Visible = false;
+                    //countArticlePartNumber = 0;
+
+                    //countArticlePartNumber++;
+                    //txtOrderNumber.Text = string.Empty;
+                    //if (countArticlePartNumber > GetArticleNumberMockData())
+                    //{
+                    //    this.Text = "Part number";
+                    //    this.lblBobbinNumber.Text = "Enter/scan part";
+                    //    this.txtPartNumber.Text = string.Empty;
+                    //    this.txtPartNumber.Visible = true;
+                    //    this.txtOrderNumber.Visible = false;
+                    //    countArticlePartNumber = 0;
+                    //}
                 }
             }
             else
             {
-                countArticlePartNumber++;                
-                
-                if (countArticlePartNumber == GetPartNumberMockData())
+                if(!numOfPiece)
                 {
-                    _mainForm.EnableMainButtons(true);
-                    _mainForm.UpdateMassageHeader("Too many stitches", "Press Machine Button Reset and Cancel Sewing");
+                    //this.lblBobbinNumber.Text = "enter/scan part";
+                    // find next available part
+                    int i = currentPartIdx;
+                    for(; i< parts.Count; i++)
+                    {
+                        if (parts[i] != null)
+                        {
+                            currentPartIdx++;
+                            break;
+                        }
+                    }
+                    if (ucContent != null)
+                    {
+                        var nameOfControl = string.Concat("txtPart", (i+1).ToString());
+                        SetArticlePartNumberValue(ucContent, nameOfControl, txtPartNumber.Text);
+                    }
+                    this.txtPartNumber.Text = string.Empty;
+                    if(i == lastPartIdx)
+                    {
+                        numOfPiece = true;
+                        _mainForm.EnableMainButtons(true);
+                        _mainForm.UpdateMassageHeader("Too many stitches", "Press Machine Button Reset and Cancel Sewing");
+                        this.lblBobbinNumber.Text = "Please enter the number of pieces.";
+                    }
+                } else
+                {
+                    SetArticlePartNumberValue(ucContent, "txtNoOfPiece", txtPartNumber.Text);
                     this.Close();
                 }
-                if (ucContent != null)
-                {
-                    var nameOfControl = string.Concat("txtPart", countArticlePartNumber.ToString());
-                    SetArticlePartNumberValue(ucContent, nameOfControl, txtPartNumber.Text); 
-                }
-                this.txtPartNumber.Text = string.Empty;
+
+
+
+                //countArticlePartNumber++;
+                //if (countArticlePartNumber == GetPartNumberMockData())
+                //{
+                //    _mainForm.EnableMainButtons(true);
+                //    _mainForm.UpdateMassageHeader("Too many stitches", "Press Machine Button Reset and Cancel Sewing");
+                //    this.Close();
+                //}
+                //if (ucContent != null)
+                //{
+                //    var nameOfControl = string.Concat("txtPart", countArticlePartNumber.ToString());
+                //    SetArticlePartNumberValue(ucContent, nameOfControl, txtPartNumber.Text); 
+                //}
             }
         }
+
 
         private void SetArticlePartNumberValue(Control ucContent, string nameofControl, string value)
         {            
@@ -113,7 +181,7 @@ namespace BiasysControl.Features.Order
         }
         private int GetArticleNumberMockData()
         {
-            return 4;
+            return 1;
         }
     }
 }

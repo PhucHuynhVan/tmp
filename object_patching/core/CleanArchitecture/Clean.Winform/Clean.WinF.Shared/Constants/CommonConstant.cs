@@ -30,6 +30,7 @@
         public const string AppsettingIsAllowedApplicationTimeout = "IsAllowedSessionTimeout";
         public const string AppsettingApplicationTimeoutValue = "ApplicationTimeoutValue";
         public const string InitialBobbinRowGridView = "InitialBobbinRowGridView";
+        public const string AppsettingBiasysControlPath = "BiasysControlPath";
     }
 
     public static class CRUDPermissionMessageContants

@@ -39,7 +39,7 @@ namespace BiasysControl
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] arg)
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
@@ -172,10 +172,7 @@ namespace BiasysControl
             ISystemConfigurationCommandServices systemConfigurationCommandServices = serviceProvider.GetService<ISystemConfigurationCommandServices>();
 
             mainForm = new MainForm(
-                //languageCommandService,
-                //langQueryService,
-                //menuCommandService,
-                //menuQueryService,
+                arg,
                 userQueryService,
                 userCommandService,
                 partCommandService,
@@ -192,10 +189,6 @@ namespace BiasysControl
                 bobbinQueryService,
                 dBLogQueryServices,
                 windingParamCommandServices,
-                //userGroupCommandService,
-                //userGroupQueryService,
-                //permissionCommandServices,
-                //roleCommandServices,
                 computerCommandServices,
                 computerQueryServices,
                 changeNeedleCommandServices,

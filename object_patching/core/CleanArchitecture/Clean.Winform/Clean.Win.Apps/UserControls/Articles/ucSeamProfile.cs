@@ -79,70 +79,74 @@ namespace Clean.Win.AppUI.UserControls
             {
                 radioButton.Checked = radioButton.Tag.Equals(dto.SeamProfile);
             }
-            AutomatDto automatDto = dto.Automat;
+            if (dto.Automat != null)
+            {
+                AutomatDto automatDto = dto.Automat;
 
-            //OneCriticalSectionNoSeamsWithFLPart
-            rb1Critical0Notches2.Enabled = automatDto.OneCriticalSectionNoSeamsWithFLPart;
-            pictureBox1.Enabled = automatDto.OneCriticalSectionNoSeamsWithFLPart;
+                //OneCriticalSectionNoSeamsWithFLPart
+                rb1Critical0Notches2.Enabled = automatDto.OneCriticalSectionNoSeamsWithFLPart;
+                pictureBox1.Enabled = automatDto.OneCriticalSectionNoSeamsWithFLPart;
 
-            //OneCriticalSectionNoSeamsWithEndLabel
-            rb1Critical0Notches1.Enabled = automatDto.OneCriticalSectionNoSeamsWithEndLabel;
-            pictureBox5.Enabled = automatDto.OneCriticalSectionNoSeamsWithEndLabel;
-            //OneCriticalSectionTwoSeamsWithFLPart
-            rb1Critical2Notches3.Enabled = automatDto.OneCriticalSectionTwoSeamsWithFLPart;
-            pictureBox4.Enabled = automatDto.OneCriticalSectionTwoSeamsWithFLPart;
-
-
-
-            //OneCriticalSectionTwoSeamsWithEndLabelBehind
-            rb1Critical2Notches1.Enabled = automatDto.OneCriticalSectionTwoSeamsWithEndLabelBehind;
-            pictureBox2.Enabled = automatDto.OneCriticalSectionTwoSeamsWithEndLabelBehind;
-
-            //OneCriticalSectionTwoSeamsWithEndLabel
-            rb1Critical2Notches2.Enabled = automatDto.OneCriticalSectionTwoSeamsWithEndLabel;
-            pictureBox3.Enabled = automatDto.OneCriticalSectionTwoSeamsWithEndLabel;
-
-            //ThreeCriticalSectionTwoSeamsWithFLPart
-            rb1Critical2Notches5.Enabled = automatDto.ThreeCriticalSectionTwoSeamsWithFLPart;
-            pictureBox6.Enabled = automatDto.ThreeCriticalSectionTwoSeamsWithFLPart;
-            //ThreeCriticalSectionTwoSeamsWithEndLabel
-            rb1Critical2Notches4.Enabled = automatDto.ThreeCriticalSectionTwoSeamsWithEndLabel;
-            pictureBox7.Enabled = automatDto.ThreeCriticalSectionTwoSeamsWithEndLabel;
+                //OneCriticalSectionNoSeamsWithEndLabel
+                rb1Critical0Notches1.Enabled = automatDto.OneCriticalSectionNoSeamsWithEndLabel;
+                pictureBox5.Enabled = automatDto.OneCriticalSectionNoSeamsWithEndLabel;
+                //OneCriticalSectionTwoSeamsWithFLPart
+                rb1Critical2Notches3.Enabled = automatDto.OneCriticalSectionTwoSeamsWithFLPart;
+                pictureBox4.Enabled = automatDto.OneCriticalSectionTwoSeamsWithFLPart;
 
 
-            //TwoCriticalSectionFourSeamsWithFLPart
-            rb1Critical4Notches3.Enabled = automatDto.TwoCriticalSectionFourSeamsWithFLPart;
-            pictureBox10.Enabled = automatDto.TwoCriticalSectionFourSeamsWithFLPart;
-            //TwoCriticalSectionFourSeamsWithEndLabelBehind
-            rb1Critical4Notches1.Enabled = automatDto.TwoCriticalSectionFourSeamsWithEndLabelBehind;
-            pictureBox12.Enabled = automatDto.TwoCriticalSectionFourSeamsWithEndLabelBehind;
-            //TwoCriticalSectionFourSeamsWithEndLabel
-            rb1Critical4Notches2.Enabled = automatDto.TwoCriticalSectionFourSeamsWithEndLabel;
-            pictureBox11.Enabled = automatDto.TwoCriticalSectionFourSeamsWithEndLabel;
 
-            //ThreeCriticalSectionFourSeamsWithFLPart
-            rb1Critical4Notches6.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithFLPart;
-            pictureBox13.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithFLPart;
+                //OneCriticalSectionTwoSeamsWithEndLabelBehind
+                rb1Critical2Notches1.Enabled = automatDto.OneCriticalSectionTwoSeamsWithEndLabelBehind;
+                pictureBox2.Enabled = automatDto.OneCriticalSectionTwoSeamsWithEndLabelBehind;
 
-            //ThreeCriticalSectionFourSeamsWithEndLabelBehind
-            rb1Critical4Notches4.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithEndLabelBehind;
-            pictureBox9.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithEndLabelBehind;
+                //OneCriticalSectionTwoSeamsWithEndLabel
+                rb1Critical2Notches2.Enabled = automatDto.OneCriticalSectionTwoSeamsWithEndLabel;
+                pictureBox3.Enabled = automatDto.OneCriticalSectionTwoSeamsWithEndLabel;
 
-            //ThreeCriticalSectionFourSeamsWithEndLabel
-            rb1Critical4Notches5.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithEndLabel;
-            pictureBox8.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithEndLabel;
+                //ThreeCriticalSectionTwoSeamsWithFLPart
+                rb1Critical2Notches5.Enabled = automatDto.ThreeCriticalSectionTwoSeamsWithFLPart;
+                pictureBox6.Enabled = automatDto.ThreeCriticalSectionTwoSeamsWithFLPart;
+                //ThreeCriticalSectionTwoSeamsWithEndLabel
+                rb1Critical2Notches4.Enabled = automatDto.ThreeCriticalSectionTwoSeamsWithEndLabel;
+                pictureBox7.Enabled = automatDto.ThreeCriticalSectionTwoSeamsWithEndLabel;
 
-            //OneCriticalSectionTwoSeamsWithTwoEndLabel
-            rbCustomSeam2.Enabled = automatDto.OneCriticalSectionTwoSeamsWithTwoEndLabel;
-            pictureBox16.Enabled = automatDto.OneCriticalSectionTwoSeamsWithTwoEndLabel;
 
-            //TwoCriticalSectionFourSeamsWithTwoEndLabel
-            rbCustomSeam1.Enabled = automatDto.TwoCriticalSectionFourSeamsWithTwoEndLabel;
-            pictureBox14.Enabled = automatDto.TwoCriticalSectionFourSeamsWithTwoEndLabel;
+                //TwoCriticalSectionFourSeamsWithFLPart
+                rb1Critical4Notches3.Enabled = automatDto.TwoCriticalSectionFourSeamsWithFLPart;
+                pictureBox10.Enabled = automatDto.TwoCriticalSectionFourSeamsWithFLPart;
+                //TwoCriticalSectionFourSeamsWithEndLabelBehind
+                rb1Critical4Notches1.Enabled = automatDto.TwoCriticalSectionFourSeamsWithEndLabelBehind;
+                pictureBox12.Enabled = automatDto.TwoCriticalSectionFourSeamsWithEndLabelBehind;
+                //TwoCriticalSectionFourSeamsWithEndLabel
+                rb1Critical4Notches2.Enabled = automatDto.TwoCriticalSectionFourSeamsWithEndLabel;
+                pictureBox11.Enabled = automatDto.TwoCriticalSectionFourSeamsWithEndLabel;
 
-            //ThreeCriticalSectionFourSeamsWithTwoEndLabel
-            rbCustomSeam1.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithTwoEndLabel;
-            pictureBox14.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithTwoEndLabel;
+                //ThreeCriticalSectionFourSeamsWithFLPart
+                rb1Critical4Notches6.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithFLPart;
+                pictureBox13.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithFLPart;
+
+                //ThreeCriticalSectionFourSeamsWithEndLabelBehind
+                rb1Critical4Notches4.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithEndLabelBehind;
+                pictureBox9.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithEndLabelBehind;
+
+                //ThreeCriticalSectionFourSeamsWithEndLabel
+                rb1Critical4Notches5.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithEndLabel;
+                pictureBox8.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithEndLabel;
+
+                //OneCriticalSectionTwoSeamsWithTwoEndLabel
+                rbCustomSeam2.Enabled = automatDto.OneCriticalSectionTwoSeamsWithTwoEndLabel;
+                pictureBox16.Enabled = automatDto.OneCriticalSectionTwoSeamsWithTwoEndLabel;
+
+                //TwoCriticalSectionFourSeamsWithTwoEndLabel
+                rbCustomSeam1.Enabled = automatDto.TwoCriticalSectionFourSeamsWithTwoEndLabel;
+                pictureBox14.Enabled = automatDto.TwoCriticalSectionFourSeamsWithTwoEndLabel;
+
+                //ThreeCriticalSectionFourSeamsWithTwoEndLabel
+                rbCustomSeam1.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithTwoEndLabel;
+                pictureBox14.Enabled = automatDto.ThreeCriticalSectionFourSeamsWithTwoEndLabel;
+            }
+
         }
 
         private void radioButtons_CheckedChanged(object sender, EventArgs e)

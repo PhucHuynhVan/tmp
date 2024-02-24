@@ -364,7 +364,7 @@ namespace Clean.Win.AppUI.UserControls
 
         private void updateFormData(ArticleDto model)
         {
-            if (model != null)
+            if (model != null && model.Automat != null)
             {
                 txtArticleCode.Text = model.Code;
                 txtArticleName.Text = model.Name;

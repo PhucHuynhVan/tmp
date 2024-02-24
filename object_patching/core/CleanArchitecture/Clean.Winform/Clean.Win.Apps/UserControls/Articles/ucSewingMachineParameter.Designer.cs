@@ -31,39 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSewingMachineParameter));
             pnlSewingMachineParameter = new System.Windows.Forms.Panel();
             grbBackTack = new System.Windows.Forms.GroupBox();
-            textBox1 = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
-            textBox3 = new System.Windows.Forms.TextBox();
-            textBox4 = new System.Windows.Forms.TextBox();
-            textBox5 = new System.Windows.Forms.TextBox();
-            textBox6 = new System.Windows.Forms.TextBox();
+            txtStitchBackwardEndlabelSeamEnd = new System.Windows.Forms.TextBox();
+            txtStitchForwardEndlabelSeamEnd = new System.Windows.Forms.TextBox();
+            txtStitchBackwardEndlabelSeamFront = new System.Windows.Forms.TextBox();
+            txtStitchForwardEndlabelSeamFront = new System.Windows.Forms.TextBox();
             label29 = new System.Windows.Forms.Label();
             label25 = new System.Windows.Forms.Label();
             label24 = new System.Windows.Forms.Label();
-            txtRepetitionSeam2End = new System.Windows.Forms.TextBox();
-            txtRepetitionSeam1End = new System.Windows.Forms.TextBox();
-            txtStitchBackwardSeam2End = new System.Windows.Forms.TextBox();
-            txtStitchBackwardSeam1End = new System.Windows.Forms.TextBox();
-            txtStitchForwardSeam2End = new System.Windows.Forms.TextBox();
-            txtStitchForwardSeam1End = new System.Windows.Forms.TextBox();
-            txtRepetitionSeam2Front = new System.Windows.Forms.TextBox();
-            txtRepetitionSeam1Front = new System.Windows.Forms.TextBox();
-            txtStitchBackwardSeam2Front = new System.Windows.Forms.TextBox();
-            txtStitchBackwardSeam1Front = new System.Windows.Forms.TextBox();
-            txtStitchForwardSeam2Front = new System.Windows.Forms.TextBox();
-            txtStitchForwardSeam1Front = new System.Windows.Forms.TextBox();
+            txtStitchBackwardSABSeamEnd = new System.Windows.Forms.TextBox();
+            txtStitchBackwardFreeSeamEnd = new System.Windows.Forms.TextBox();
+            txtStitchForwardSABSeamEnd = new System.Windows.Forms.TextBox();
+            txtStitchForwardFreeSeamEnd = new System.Windows.Forms.TextBox();
+            txtStitchBackwardSABSeamFront = new System.Windows.Forms.TextBox();
+            txtStitchBackwardFreeSeamFront = new System.Windows.Forms.TextBox();
+            txtStitchForwardSABSeamFront = new System.Windows.Forms.TextBox();
+            txtStitchForwardFreeSeamFront = new System.Windows.Forms.TextBox();
             label17 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
-            pictureBox6 = new System.Windows.Forms.PictureBox();
             pictureBox5 = new System.Windows.Forms.PictureBox();
             pictureBox4 = new System.Windows.Forms.PictureBox();
-            pictureBox3 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
-            label13 = new System.Windows.Forms.Label();
             label14 = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
-            label12 = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
             grbThreadTension = new System.Windows.Forms.GroupBox();
@@ -98,10 +88,8 @@
             label2 = new System.Windows.Forms.Label();
             pnlSewingMachineParameter.SuspendLayout();
             grbBackTack.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             grbThreadTension.SuspendLayout();
@@ -122,39 +110,29 @@
             // 
             // grbBackTack
             // 
-            grbBackTack.Controls.Add(textBox1);
-            grbBackTack.Controls.Add(textBox2);
-            grbBackTack.Controls.Add(textBox3);
-            grbBackTack.Controls.Add(textBox4);
-            grbBackTack.Controls.Add(textBox5);
-            grbBackTack.Controls.Add(textBox6);
+            grbBackTack.Controls.Add(txtStitchBackwardEndlabelSeamEnd);
+            grbBackTack.Controls.Add(txtStitchForwardEndlabelSeamEnd);
+            grbBackTack.Controls.Add(txtStitchBackwardEndlabelSeamFront);
+            grbBackTack.Controls.Add(txtStitchForwardEndlabelSeamFront);
             grbBackTack.Controls.Add(label29);
             grbBackTack.Controls.Add(label25);
             grbBackTack.Controls.Add(label24);
-            grbBackTack.Controls.Add(txtRepetitionSeam2End);
-            grbBackTack.Controls.Add(txtRepetitionSeam1End);
-            grbBackTack.Controls.Add(txtStitchBackwardSeam2End);
-            grbBackTack.Controls.Add(txtStitchBackwardSeam1End);
-            grbBackTack.Controls.Add(txtStitchForwardSeam2End);
-            grbBackTack.Controls.Add(txtStitchForwardSeam1End);
-            grbBackTack.Controls.Add(txtRepetitionSeam2Front);
-            grbBackTack.Controls.Add(txtRepetitionSeam1Front);
-            grbBackTack.Controls.Add(txtStitchBackwardSeam2Front);
-            grbBackTack.Controls.Add(txtStitchBackwardSeam1Front);
-            grbBackTack.Controls.Add(txtStitchForwardSeam2Front);
-            grbBackTack.Controls.Add(txtStitchForwardSeam1Front);
+            grbBackTack.Controls.Add(txtStitchBackwardSABSeamEnd);
+            grbBackTack.Controls.Add(txtStitchBackwardFreeSeamEnd);
+            grbBackTack.Controls.Add(txtStitchForwardSABSeamEnd);
+            grbBackTack.Controls.Add(txtStitchForwardFreeSeamEnd);
+            grbBackTack.Controls.Add(txtStitchBackwardSABSeamFront);
+            grbBackTack.Controls.Add(txtStitchBackwardFreeSeamFront);
+            grbBackTack.Controls.Add(txtStitchForwardSABSeamFront);
+            grbBackTack.Controls.Add(txtStitchForwardFreeSeamFront);
             grbBackTack.Controls.Add(label17);
             grbBackTack.Controls.Add(label16);
-            grbBackTack.Controls.Add(pictureBox6);
             grbBackTack.Controls.Add(pictureBox5);
             grbBackTack.Controls.Add(pictureBox4);
-            grbBackTack.Controls.Add(pictureBox3);
             grbBackTack.Controls.Add(pictureBox2);
             grbBackTack.Controls.Add(pictureBox1);
-            grbBackTack.Controls.Add(label13);
             grbBackTack.Controls.Add(label14);
             grbBackTack.Controls.Add(label15);
-            grbBackTack.Controls.Add(label12);
             grbBackTack.Controls.Add(label11);
             grbBackTack.Controls.Add(label10);
             grbBackTack.Location = new System.Drawing.Point(5, 227);
@@ -164,59 +142,41 @@
             grbBackTack.TabStop = false;
             grbBackTack.Text = "BackTack";
             // 
-            // textBox1
+            // txtStitchBackwardEndlabelSeamEnd
             // 
-            textBox1.Location = new System.Drawing.Point(1137, 212);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(125, 27);
-            textBox1.TabIndex = 53;
-            textBox1.Text = "0";
-            textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchBackwardEndlabelSeamEnd.Location = new System.Drawing.Point(839, 212);
+            txtStitchBackwardEndlabelSeamEnd.Name = "txtStitchBackwardEndlabelSeamEnd";
+            txtStitchBackwardEndlabelSeamEnd.Size = new System.Drawing.Size(175, 27);
+            txtStitchBackwardEndlabelSeamEnd.TabIndex = 52;
+            txtStitchBackwardEndlabelSeamEnd.Text = "4";
+            txtStitchBackwardEndlabelSeamEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox2
+            // txtStitchForwardEndlabelSeamEnd
             // 
-            textBox2.Location = new System.Drawing.Point(957, 212);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(175, 27);
-            textBox2.TabIndex = 52;
-            textBox2.Text = "4";
-            textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchForwardEndlabelSeamEnd.Location = new System.Drawing.Point(668, 212);
+            txtStitchForwardEndlabelSeamEnd.Name = "txtStitchForwardEndlabelSeamEnd";
+            txtStitchForwardEndlabelSeamEnd.Size = new System.Drawing.Size(165, 27);
+            txtStitchForwardEndlabelSeamEnd.TabIndex = 51;
+            txtStitchForwardEndlabelSeamEnd.Text = "4";
+            txtStitchForwardEndlabelSeamEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
+            // txtStitchBackwardEndlabelSeamFront
             // 
-            textBox3.Location = new System.Drawing.Point(786, 212);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(165, 27);
-            textBox3.TabIndex = 51;
-            textBox3.Text = "4";
-            textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchBackwardEndlabelSeamFront.Location = new System.Drawing.Point(475, 212);
+            txtStitchBackwardEndlabelSeamFront.Name = "txtStitchBackwardEndlabelSeamFront";
+            txtStitchBackwardEndlabelSeamFront.Size = new System.Drawing.Size(165, 27);
+            txtStitchBackwardEndlabelSeamFront.TabIndex = 49;
+            txtStitchBackwardEndlabelSeamFront.Text = "4";
+            txtStitchBackwardEndlabelSeamFront.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // txtStitchForwardEndlabelSeamFront
             // 
-            textBox4.Location = new System.Drawing.Point(646, 212);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(134, 27);
-            textBox4.TabIndex = 50;
-            textBox4.Text = "0";
-            textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new System.Drawing.Point(475, 212);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(165, 27);
-            textBox5.TabIndex = 49;
-            textBox5.Text = "4";
-            textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new System.Drawing.Point(304, 212);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new System.Drawing.Size(165, 27);
-            textBox6.TabIndex = 48;
-            textBox6.Text = "4";
-            textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchForwardEndlabelSeamFront.Location = new System.Drawing.Point(304, 212);
+            txtStitchForwardEndlabelSeamFront.Name = "txtStitchForwardEndlabelSeamFront";
+            txtStitchForwardEndlabelSeamFront.Size = new System.Drawing.Size(165, 27);
+            txtStitchForwardEndlabelSeamFront.TabIndex = 48;
+            txtStitchForwardEndlabelSeamFront.Text = "4";
+            txtStitchForwardEndlabelSeamFront.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label29
             // 
@@ -231,9 +191,9 @@
             // 
             label25.BackColor = System.Drawing.SystemColors.ActiveBorder;
             label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            label25.Location = new System.Drawing.Point(786, 21);
+            label25.Location = new System.Drawing.Point(668, 21);
             label25.Name = "label25";
-            label25.Size = new System.Drawing.Size(475, 29);
+            label25.Size = new System.Drawing.Size(346, 29);
             label25.TabIndex = 46;
             label25.Text = "Backward";
             label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,118 +204,82 @@
             label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             label24.Location = new System.Drawing.Point(304, 21);
             label24.Name = "label24";
-            label24.Size = new System.Drawing.Size(475, 29);
+            label24.Size = new System.Drawing.Size(346, 29);
             label24.TabIndex = 45;
             label24.Text = "Forward";
             label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtRepetitionSeam2End
+            // txtStitchBackwardSABSeamEnd
             // 
-            txtRepetitionSeam2End.Location = new System.Drawing.Point(1137, 179);
-            txtRepetitionSeam2End.Name = "txtRepetitionSeam2End";
-            txtRepetitionSeam2End.Size = new System.Drawing.Size(125, 27);
-            txtRepetitionSeam2End.TabIndex = 44;
-            txtRepetitionSeam2End.Text = "0";
-            txtRepetitionSeam2End.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchBackwardSABSeamEnd.Location = new System.Drawing.Point(839, 179);
+            txtStitchBackwardSABSeamEnd.Name = "txtStitchBackwardSABSeamEnd";
+            txtStitchBackwardSABSeamEnd.Size = new System.Drawing.Size(175, 27);
+            txtStitchBackwardSABSeamEnd.TabIndex = 42;
+            txtStitchBackwardSABSeamEnd.Text = "4";
+            txtStitchBackwardSABSeamEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtRepetitionSeam1End
+            // txtStitchBackwardFreeSeamEnd
             // 
-            txtRepetitionSeam1End.Location = new System.Drawing.Point(1137, 141);
-            txtRepetitionSeam1End.Name = "txtRepetitionSeam1End";
-            txtRepetitionSeam1End.Size = new System.Drawing.Size(125, 27);
-            txtRepetitionSeam1End.TabIndex = 43;
-            txtRepetitionSeam1End.Text = "0";
-            txtRepetitionSeam1End.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchBackwardFreeSeamEnd.Location = new System.Drawing.Point(839, 141);
+            txtStitchBackwardFreeSeamEnd.Name = "txtStitchBackwardFreeSeamEnd";
+            txtStitchBackwardFreeSeamEnd.Size = new System.Drawing.Size(175, 27);
+            txtStitchBackwardFreeSeamEnd.TabIndex = 41;
+            txtStitchBackwardFreeSeamEnd.Text = "4";
+            txtStitchBackwardFreeSeamEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtStitchBackwardSeam2End
+            // txtStitchForwardSABSeamEnd
             // 
-            txtStitchBackwardSeam2End.Location = new System.Drawing.Point(957, 179);
-            txtStitchBackwardSeam2End.Name = "txtStitchBackwardSeam2End";
-            txtStitchBackwardSeam2End.Size = new System.Drawing.Size(175, 27);
-            txtStitchBackwardSeam2End.TabIndex = 42;
-            txtStitchBackwardSeam2End.Text = "4";
-            txtStitchBackwardSeam2End.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchForwardSABSeamEnd.Location = new System.Drawing.Point(668, 179);
+            txtStitchForwardSABSeamEnd.Name = "txtStitchForwardSABSeamEnd";
+            txtStitchForwardSABSeamEnd.Size = new System.Drawing.Size(165, 27);
+            txtStitchForwardSABSeamEnd.TabIndex = 40;
+            txtStitchForwardSABSeamEnd.Text = "4";
+            txtStitchForwardSABSeamEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtStitchBackwardSeam1End
+            // txtStitchForwardFreeSeamEnd
             // 
-            txtStitchBackwardSeam1End.Location = new System.Drawing.Point(957, 141);
-            txtStitchBackwardSeam1End.Name = "txtStitchBackwardSeam1End";
-            txtStitchBackwardSeam1End.Size = new System.Drawing.Size(175, 27);
-            txtStitchBackwardSeam1End.TabIndex = 41;
-            txtStitchBackwardSeam1End.Text = "4";
-            txtStitchBackwardSeam1End.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchForwardFreeSeamEnd.Location = new System.Drawing.Point(668, 141);
+            txtStitchForwardFreeSeamEnd.Name = "txtStitchForwardFreeSeamEnd";
+            txtStitchForwardFreeSeamEnd.Size = new System.Drawing.Size(165, 27);
+            txtStitchForwardFreeSeamEnd.TabIndex = 39;
+            txtStitchForwardFreeSeamEnd.Text = "4";
+            txtStitchForwardFreeSeamEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtStitchForwardSeam2End
+            // txtStitchBackwardSABSeamFront
             // 
-            txtStitchForwardSeam2End.Location = new System.Drawing.Point(786, 179);
-            txtStitchForwardSeam2End.Name = "txtStitchForwardSeam2End";
-            txtStitchForwardSeam2End.Size = new System.Drawing.Size(165, 27);
-            txtStitchForwardSeam2End.TabIndex = 40;
-            txtStitchForwardSeam2End.Text = "4";
-            txtStitchForwardSeam2End.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchBackwardSABSeamFront.Location = new System.Drawing.Point(475, 179);
+            txtStitchBackwardSABSeamFront.Name = "txtStitchBackwardSABSeamFront";
+            txtStitchBackwardSABSeamFront.Size = new System.Drawing.Size(165, 27);
+            txtStitchBackwardSABSeamFront.TabIndex = 36;
+            txtStitchBackwardSABSeamFront.Text = "4";
+            txtStitchBackwardSABSeamFront.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtStitchForwardSeam1End
+            // txtStitchBackwardFreeSeamFront
             // 
-            txtStitchForwardSeam1End.Location = new System.Drawing.Point(786, 141);
-            txtStitchForwardSeam1End.Name = "txtStitchForwardSeam1End";
-            txtStitchForwardSeam1End.Size = new System.Drawing.Size(165, 27);
-            txtStitchForwardSeam1End.TabIndex = 39;
-            txtStitchForwardSeam1End.Text = "4";
-            txtStitchForwardSeam1End.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchBackwardFreeSeamFront.Location = new System.Drawing.Point(475, 141);
+            txtStitchBackwardFreeSeamFront.Name = "txtStitchBackwardFreeSeamFront";
+            txtStitchBackwardFreeSeamFront.Size = new System.Drawing.Size(165, 27);
+            txtStitchBackwardFreeSeamFront.TabIndex = 35;
+            txtStitchBackwardFreeSeamFront.Text = "4";
+            txtStitchBackwardFreeSeamFront.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtRepetitionSeam2Front
+            // txtStitchForwardSABSeamFront
             // 
-            txtRepetitionSeam2Front.Location = new System.Drawing.Point(646, 179);
-            txtRepetitionSeam2Front.Name = "txtRepetitionSeam2Front";
-            txtRepetitionSeam2Front.Size = new System.Drawing.Size(134, 27);
-            txtRepetitionSeam2Front.TabIndex = 38;
-            txtRepetitionSeam2Front.Text = "0";
-            txtRepetitionSeam2Front.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchForwardSABSeamFront.Location = new System.Drawing.Point(304, 179);
+            txtStitchForwardSABSeamFront.Name = "txtStitchForwardSABSeamFront";
+            txtStitchForwardSABSeamFront.Size = new System.Drawing.Size(165, 27);
+            txtStitchForwardSABSeamFront.TabIndex = 34;
+            txtStitchForwardSABSeamFront.Text = "4";
+            txtStitchForwardSABSeamFront.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtRepetitionSeam1Front
+            // txtStitchForwardFreeSeamFront
             // 
-            txtRepetitionSeam1Front.Location = new System.Drawing.Point(646, 141);
-            txtRepetitionSeam1Front.Name = "txtRepetitionSeam1Front";
-            txtRepetitionSeam1Front.Size = new System.Drawing.Size(134, 27);
-            txtRepetitionSeam1Front.TabIndex = 37;
-            txtRepetitionSeam1Front.Text = "0";
-            txtRepetitionSeam1Front.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtStitchBackwardSeam2Front
-            // 
-            txtStitchBackwardSeam2Front.Location = new System.Drawing.Point(475, 179);
-            txtStitchBackwardSeam2Front.Name = "txtStitchBackwardSeam2Front";
-            txtStitchBackwardSeam2Front.Size = new System.Drawing.Size(165, 27);
-            txtStitchBackwardSeam2Front.TabIndex = 36;
-            txtStitchBackwardSeam2Front.Text = "4";
-            txtStitchBackwardSeam2Front.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtStitchBackwardSeam1Front
-            // 
-            txtStitchBackwardSeam1Front.Location = new System.Drawing.Point(475, 141);
-            txtStitchBackwardSeam1Front.Name = "txtStitchBackwardSeam1Front";
-            txtStitchBackwardSeam1Front.Size = new System.Drawing.Size(165, 27);
-            txtStitchBackwardSeam1Front.TabIndex = 35;
-            txtStitchBackwardSeam1Front.Text = "4";
-            txtStitchBackwardSeam1Front.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtStitchForwardSeam2Front
-            // 
-            txtStitchForwardSeam2Front.Location = new System.Drawing.Point(304, 179);
-            txtStitchForwardSeam2Front.Name = "txtStitchForwardSeam2Front";
-            txtStitchForwardSeam2Front.Size = new System.Drawing.Size(165, 27);
-            txtStitchForwardSeam2Front.TabIndex = 34;
-            txtStitchForwardSeam2Front.Text = "4";
-            txtStitchForwardSeam2Front.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtStitchForwardSeam1Front
-            // 
-            txtStitchForwardSeam1Front.Location = new System.Drawing.Point(304, 141);
-            txtStitchForwardSeam1Front.Name = "txtStitchForwardSeam1Front";
-            txtStitchForwardSeam1Front.Size = new System.Drawing.Size(165, 27);
-            txtStitchForwardSeam1Front.TabIndex = 19;
-            txtStitchForwardSeam1Front.Text = "4";
-            txtStitchForwardSeam1Front.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtStitchForwardFreeSeamFront.Location = new System.Drawing.Point(304, 141);
+            txtStitchForwardFreeSeamFront.Name = "txtStitchForwardFreeSeamFront";
+            txtStitchForwardFreeSeamFront.Size = new System.Drawing.Size(165, 27);
+            txtStitchForwardFreeSeamFront.TabIndex = 19;
+            txtStitchForwardFreeSeamFront.Text = "4";
+            txtStitchForwardFreeSeamFront.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label17
             // 
@@ -375,16 +299,6 @@
             label16.TabIndex = 32;
             label16.Text = "Free Seam";
             // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (System.Drawing.Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new System.Drawing.Point(1137, 99);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new System.Drawing.Size(30, 29);
-            pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 31;
-            pictureBox6.TabStop = false;
-            // 
             // pictureBox5
             // 
             pictureBox5.Image = (System.Drawing.Image)resources.GetObject("pictureBox5.Image");
@@ -398,22 +312,12 @@
             // pictureBox4
             // 
             pictureBox4.Image = (System.Drawing.Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new System.Drawing.Point(786, 99);
+            pictureBox4.Location = new System.Drawing.Point(668, 99);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new System.Drawing.Size(30, 29);
             pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 29;
             pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (System.Drawing.Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new System.Drawing.Point(655, 99);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new System.Drawing.Size(30, 29);
-            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 28;
-            pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -435,19 +339,10 @@
             pictureBox1.TabIndex = 26;
             pictureBox1.TabStop = false;
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(1137, 67);
-            label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(125, 20);
-            label13.TabIndex = 25;
-            label13.Text = "Repetition (0...10)";
-            // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new System.Drawing.Point(957, 67);
+            label14.Location = new System.Drawing.Point(839, 67);
             label14.Name = "label14";
             label14.Size = new System.Drawing.Size(175, 20);
             label14.TabIndex = 24;
@@ -456,20 +351,11 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new System.Drawing.Point(786, 67);
+            label15.Location = new System.Drawing.Point(668, 67);
             label15.Name = "label15";
             label15.Size = new System.Drawing.Size(165, 20);
             label15.TabIndex = 23;
             label15.Text = "Stitches Forward (0...20)";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new System.Drawing.Point(655, 67);
-            label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(125, 20);
-            label12.TabIndex = 21;
-            label12.Text = "Repetition (0...10)";
             // 
             // label11
             // 
@@ -538,8 +424,10 @@
             checkBox4.Name = "checkBox4";
             checkBox4.Size = new System.Drawing.Size(18, 17);
             checkBox4.TabIndex = 31;
+            checkBox4.Tag = "MonitoringEndlabelSeam";
             checkBox4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.MouseClick += cb_MouseClick;
             // 
             // label27
             // 
@@ -557,8 +445,10 @@
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new System.Drawing.Size(18, 17);
             checkBox3.TabIndex = 29;
+            checkBox3.Tag = "MonitoringSeaction3";
             checkBox3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.MouseClick += cb_MouseClick;
             // 
             // label26
             // 
@@ -576,8 +466,10 @@
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new System.Drawing.Size(18, 17);
             checkBox2.TabIndex = 27;
+            checkBox2.Tag = "MonitoringSeaction1";
             checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.MouseClick += cb_MouseClick;
             // 
             // label4
             // 
@@ -595,8 +487,10 @@
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new System.Drawing.Size(18, 17);
             checkBox1.TabIndex = 25;
+            checkBox1.Tag = "MonitoringFreeSeam";
             checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.MouseClick += cb_MouseClick;
             // 
             // label23
             // 
@@ -813,10 +707,8 @@
             pnlSewingMachineParameter.ResumeLayout(false);
             grbBackTack.ResumeLayout(false);
             grbBackTack.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             grbThreadTension.ResumeLayout(false);
@@ -844,32 +736,24 @@
         private System.Windows.Forms.TextBox txtMinTolerance;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox grbBackTack;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtRepetitionSeam2End;
-        private System.Windows.Forms.TextBox txtRepetitionSeam1End;
-        private System.Windows.Forms.TextBox txtStitchBackwardSeam2End;
-        private System.Windows.Forms.TextBox txtStitchBackwardSeam1End;
-        private System.Windows.Forms.TextBox txtStitchForwardSeam2End;
-        private System.Windows.Forms.TextBox txtStitchForwardSeam1End;
-        private System.Windows.Forms.TextBox txtRepetitionSeam2Front;
-        private System.Windows.Forms.TextBox txtRepetitionSeam1Front;
-        private System.Windows.Forms.TextBox txtStitchBackwardSeam2Front;
-        private System.Windows.Forms.TextBox txtStitchBackwardSeam1Front;
-        private System.Windows.Forms.TextBox txtStitchForwardSeam2Front;
-        private System.Windows.Forms.TextBox txtStitchForwardSeam1Front;
+        private System.Windows.Forms.TextBox txtStitchBackwardSABSeamEnd;
+        private System.Windows.Forms.TextBox txtStitchBackwardFreeSeamEnd;
+        private System.Windows.Forms.TextBox txtStitchForwardSABSeamEnd;
+        private System.Windows.Forms.TextBox txtStitchForwardFreeSeamEnd;
+        private System.Windows.Forms.TextBox txtStitchBackwardSABSeamFront;
+        private System.Windows.Forms.TextBox txtStitchBackwardFreeSeamFront;
+        private System.Windows.Forms.TextBox txtStitchForwardSABSeamFront;
+        private System.Windows.Forms.TextBox txtStitchForwardFreeSeamFront;
         public System.Windows.Forms.Panel pnlSewingMachineParameter;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label23;
@@ -887,12 +771,10 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtStitchBackwardEndlabelSeamEnd;
+        private System.Windows.Forms.TextBox txtStitchForwardEndlabelSeamEnd;
+        private System.Windows.Forms.TextBox txtStitchBackwardEndlabelSeamFront;
+        private System.Windows.Forms.TextBox txtStitchForwardEndlabelSeamFront;
         private System.Windows.Forms.Label label29;
     }
 }

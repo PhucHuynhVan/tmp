@@ -4,11 +4,13 @@ using BiasysControl.Features.Logins;
 using BiasysControl.Features.Order;
 using BiasysControl.UICommon;
 using Clean.Win.AppUI.Forms;
+using Clean.WinF.Applications.Features.Article.DTOs;
 using Clean.WinF.Applications.Features.Article.Interfaces;
 using Clean.WinF.Applications.Features.Automat.Interfaces;
 using Clean.WinF.Applications.Features.Bobbin.Interfaces;
 using Clean.WinF.Applications.Features.Computer.Interfaces;
 using Clean.WinF.Applications.Features.Language.Interfaces;
+using Clean.WinF.Applications.Features.Part.DTOs;
 using Clean.WinF.Applications.Features.Part.Interfaces;
 using Clean.WinF.Applications.Features.SewingMachine.Interfaces;
 using Clean.WinF.Applications.Features.Supplier.Interfaces;
@@ -17,8 +19,13 @@ using Clean.WinF.Applications.Features.Systems.Log;
 using Clean.WinF.Applications.Features.Thread.Interfaces;
 using Clean.WinF.Applications.Features.Users.Interfaces;
 using Clean.WinF.Common.Utilities;
+using Clean.WinF.Domain.Entities;
 using Clean.WinF.Shared.Constants;
+using DocumentFormat.OpenXml.EMMA;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using Serilog;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 
@@ -64,6 +71,7 @@ namespace BiasysControl
         public Point mousePosition;//will help detect mouse acitvity in the winform applicaton
         int _timeoutCounter = 0;
         int MaxTimoutCounter = 60000;//5 minutes for waiting
+        string[] byasControlAgrs = null;
 
         private readonly BiasysControl.UICommon.UICommon uiCommon = BiasysControl.UICommon.UICommon.Instance;
 
@@ -74,11 +82,10 @@ namespace BiasysControl
         AutomatSelect automatSelect = null;
         BobbinNumberInput bobbinNumberInput = null;
         OrderNumberInput orderNumberInput = null;
-        public MainForm(
-            //ILanguageCommandServices languageCommandService,
-            //ILanguageQueryServices languageQueryService,
-            //Clean.WinF.Applications.Features.Menu.Interfaces.IMenuCommandServices menuCommandService,
-            //Clean.WinF.Applications.Features.Menu.Interfaces.IMenuQueryServices menuQueryService,
+
+        private ArticleDto articleDto = null;
+
+        public MainForm(string[] arg,
             IUserQueryServices userQueryServices,
             IUserCommandServices userCommandServices,
             IPartCommandServices partCommandServices,
@@ -95,10 +102,6 @@ namespace BiasysControl
             IBobbinQueryServices bobbinQueryServices,
             IDBLogQueryServices dBLogQueryServices,
             IWindingParamCommandServices windingParamCommandServices,
-            //IUserGroupCommandServices userGroupCommandServices,
-            //IUserGroupQueryServices userGroupQueryServices,
-            //IPermissionCommandServices permissionCommandServices,
-            //IRoleCommandServices roleCommandServices,
             IComputerCommandServices computerCommandServices,
             IComputerQueryServices computerQueryServices,
             IChangeNeedleRecordCommandServices changeNeedleCommandServices,
@@ -110,10 +113,6 @@ namespace BiasysControl
             try
             {
                 //DI services in Mainform constructor
-                //_languageCommandService = languageCommandService;
-                //_languageQueryService = languageQueryService;
-                //_menuCommandService = menuCommandService;
-                //_menuQueryService = menuQueryService;
                 _userQueryServices = userQueryServices;
                 _userCommandServices = userCommandServices;
                 _partCommandService = partCommandServices;
@@ -130,23 +129,20 @@ namespace BiasysControl
                 _bobbinQueryServices = bobbinQueryServices;
                 _dBLogQueryServices = dBLogQueryServices;
                 _windingParamCommandServices = windingParamCommandServices;
-                //_userGroupCommandServices = userGroupCommandServices;
-                //_userGroupQueryServicess = userGroupQueryServices;
-                //_permissionCommandServices = permissionCommandServices;
-                //_roleCommandServices = roleCommandServices;
                 _computerCommandServices = computerCommandServices;
                 _computerQueryServices = computerQueryServices;
                 _changeNeedleCommandServices = changeNeedleCommandServices;
                 _clipSensorActivationCommandServices = clipSensorActivationCommandServices;
                 _sewingMachineConfigurationCommandServices = sewingMachineConfigurationCommandServices;
                 _systemConfigurationCommandServices = systemConfigurationCommandServices;
-
+                byasControlAgrs = arg;
                 InitializeComponent();
                 this.Icon = Icon.ExtractAssociatedIcon(Application.StartupPath + "\\Icons\\" + UIConstants.APP_0_Icon);
                 WindowState = FormWindowState.Maximized; // Set the form to maximized state                
                 this.Location = new Point(0, 0);
                 this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
+                
             }
             catch (Exception ex)
             {
@@ -154,12 +150,47 @@ namespace BiasysControl
             }
         }
 
+        public async void updateArticleInfo(String articleCode, OrderNumberInput orderNumberInput)
+        {
+            //List<ArticleDto> articles = this.getArticle(articleCode).Result;
+            var articles = await _articleQueryService.ListAllAsync();
+            if (!articles.IsNullOrEmpty())
+            {
+                ArticleDto articleDto = articles[0];
+                String code = articleDto.Code;
+                String automat = articleDto.Automat.Code;
+                String needleThread = articleDto.UpperThreadMaterialCode;
+                String bobbinThread = articleDto.LowerThreadMaterialCode;
+                String section1StitchLength = articleDto.Section1StitchLength;
+                //MessageBox.Show(code + " - " + automat + " - " + needleThread + " - " + bobbinThread + " - " + section1StitchLength);
+
+                var ucContent = uiCommon.FindControlByName(this.pnlRightContent, "ucContent");
+                if (ucContent != null)
+                {
+
+                    var txtAutomat = uiCommon.FindControlByName(ucContent, "txtAutomat") as TextBox;
+                    if (txtAutomat != null)
+                    {
+                        txtAutomat.Text = automat;
+                    }
+
+                    orderNumberInput.article = articleDto;
+
+                    this.articleDto = articleDto;
+                }
+            }
+        }
+
+        private async Task<List<ArticleDto>> getArticle(String code)
+        {
+            return await _articleQueryService.GetArticleByCode(code);
+        }
+
         private void InitializeMultiLanguages()
         {
             CultureInfo systemCulture = CultureInfo.InstalledUICulture;
             this.Tag = systemCulture.TwoLetterISOLanguageName;
-            appID = 0;//_languageQueryService.GetApplicationIDByName(UIConstants.APP_2_Name);
-            //uiCommon.ProcessMultipleLanguages(this, this, UIConstants.Main_GUI, this.Tag.ToString());
+            appID = 0;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -198,14 +229,15 @@ namespace BiasysControl
         {
             try
             {
-                lblTitle2.Left = (pnlTitle.Width / 2); //- (lblTitle.Width / 2);
-                lblTitle.Left = (pnlTitle.Width / 2); //- (lblTitle.Width / 2);
+                lblTitle2.Left = (pnlTitle.Width / 2) - (lblTitle.Width / 2);
+                lblTitle.Left = (pnlTitle.Width / 2) - (lblTitle.Width / 2);
                 uiCommon.DisplayInitialAppInformation(this);
                 InitializeMultiLanguages();
                 var encryptKey = ConfigurationManager.AppSettings[AppConfigurationConstants.AppsettingEncryptionKey];
                 var encryptIV = ConfigurationManager.AppSettings[AppConfigurationConstants.AppsettingEncryptionIV];
                 //if (!RegUtility.IsExistingLicenseKey(encryptKey, encryptIV) || !RegUtility.IsInvalidLicense(encryptKey, encryptIV))
                 //DisplayActiveLicenseKeyForm(false);
+                DisplayByasControlParameter();
                 DisplayStatusBarInformation();
                 DisplayActiveLoginForm(false);
                 lblUserLogin.Text = "User id: " + UIUtility.userLogin;
@@ -214,6 +246,34 @@ namespace BiasysControl
             catch (Exception ex)
             {
                 Log.Error(string.Concat("Error: MainForm_Load() ", ex.Message, Environment.NewLine, ex.StackTrace));
+            }
+        }
+
+        private void DisplayByasControlParameter()
+        {
+            //impelement parameters for ByasControl app here!!!
+            if (byasControlAgrs != null && byasControlAgrs.Length > 0)
+            {
+                for (var i = 0; i < byasControlAgrs.Length; i++)
+                {
+                    var articleObj = JsonConvert.DeserializeObject<ArticleDto>(byasControlAgrs[i]);
+                    if (articleObj != null && !string.IsNullOrEmpty(articleObj.Description))
+                    {
+                        MessageBox.Show("Article object: Code = " + articleObj.Code + ", Description = " + articleObj.Description);
+                    }
+
+                    var partObj = JsonConvert.DeserializeObject<PartDto>(byasControlAgrs[i]);
+                    if (partObj != null && !string.IsNullOrEmpty(partObj.Name))
+                    {
+                        MessageBox.Show("Partobject: Code = " + partObj.Code + ", Name = " + partObj.Name);
+                    }
+
+                    var automatObj = JsonConvert.DeserializeObject<AutomatDto>(byasControlAgrs[i]);
+                    if (automatObj != null && !string.IsNullOrEmpty(automatObj.Name))
+                    {
+                        MessageBox.Show("Automat object: Code= " + automatObj.Code + ", Name= " + automatObj.Name);
+                    }
+                }
             }
         }
 
@@ -535,6 +595,12 @@ namespace BiasysControl
         {
             System.Diagnostics.Process.Start(Application.ExecutablePath);
             Application.Exit(); // close the current instance
+        }
+
+        private void btnNewArticleAndOrder_Click(object sender, EventArgs e)
+        {
+            this.articleDto = null;
+            DisplayActiveOrderNumberForm();
         }
     }
 }

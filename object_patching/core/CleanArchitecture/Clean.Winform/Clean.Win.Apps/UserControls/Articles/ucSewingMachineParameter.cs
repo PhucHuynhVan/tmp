@@ -22,19 +22,52 @@ namespace Clean.Win.AppUI.UserControls
             txtStopFilter.KeyUp += onKeyUp;
             txtStartMonitoring.KeyUp += onKeyUp;
 
-            txtStitchForwardSeam1Front.KeyUp += onKeyUp;
-            txtStitchBackwardSeam1Front.KeyUp += onKeyUp;
-            txtRepetitionSeam1Front.KeyUp += onKeyUp;
-            txtStitchForwardSeam1End.KeyUp += onKeyUp;
-            txtStitchBackwardSeam1End.KeyUp += onKeyUp;
-            txtRepetitionSeam1End.KeyUp += onKeyUp;
-            txtStitchForwardSeam2Front.KeyUp += onKeyUp;
-            txtStitchBackwardSeam2Front.KeyUp += onKeyUp;
-            txtRepetitionSeam2Front.KeyUp += onKeyUp;
-            txtStitchForwardSeam2End.KeyUp += onKeyUp;
-            txtStitchBackwardSeam2End.KeyUp += onKeyUp;
-            txtRepetitionSeam2End.KeyUp += onKeyUp;
+            txtStitchForwardFreeSeamFront.KeyUp += onKeyUp;
+            txtStitchBackwardFreeSeamFront.KeyUp += onKeyUp;
+            txtStitchForwardFreeSeamEnd.KeyUp += onKeyUp;
+            txtStitchBackwardFreeSeamEnd.KeyUp += onKeyUp;
 
+            txtStitchForwardSABSeamFront.KeyUp += onKeyUp;
+            txtStitchBackwardSABSeamFront.KeyUp += onKeyUp;
+            txtStitchForwardSABSeamEnd.KeyUp += onKeyUp;
+            txtStitchBackwardSABSeamEnd.KeyUp += onKeyUp;
+
+            txtStitchForwardEndlabelSeamFront.KeyUp += onKeyUp;
+            txtStitchBackwardEndlabelSeamFront.KeyUp += onKeyUp;
+            txtStitchForwardEndlabelSeamEnd.KeyUp += onKeyUp;
+            txtStitchBackwardEndlabelSeamEnd.KeyUp += onKeyUp;
+
+        }
+
+        private void cb_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (sender is CheckBox)
+            {
+                CheckBox checkbox = (CheckBox)sender;
+                if (!dto.IsCreated)
+                {
+                    dto.IsUpdated = true;
+                }
+                switch (checkbox.Tag)
+                {
+                    case "MonitoringFreeSeam":
+                        dto.MonitoringFreeSeam = checkbox.Checked ? "1" : "0";
+                        break;
+                    case "MonitoringSeaction1":
+                        dto.MonitoringSeaction1 = checkbox.Checked ? "1" : "0";
+                        break;
+                    case "MonitoringSeaction3":
+                        dto.MonitoringSeaction3 = checkbox.Checked ? "1" : "0";
+                        break;
+                    case "MonitoringEndlabelSeam":
+                        dto.MonitoringEndlabelSeam = checkbox.Checked ? "1" : "0";
+                        break;
+
+                }
+
+
+                OnDataChange.Invoke();
+            }
         }
 
 
@@ -59,19 +92,20 @@ namespace Clean.Win.AppUI.UserControls
             dto.ThreadTensionSeam1StopFilter = txtStopFilter.Text;
             dto.ThreadTensionSeam1StartMonitoring = txtStartMonitoring.Text;
 
-            dto.BacktackStartSeam1Forward = txtStitchForwardSeam1Front.Text;
-            dto.BacktackStartSeam1Backward = txtStitchBackwardSeam1Front.Text;
-            dto.BacktackStartSeam1Repetition = txtRepetitionSeam1Front.Text;
-            dto.BacktackEndSeam1Forward = txtStitchForwardSeam1End.Text;
-            dto.BacktackEndSeam1Backward = txtStitchBackwardSeam1End.Text;
-            dto.BacktackEndSeam1Repetition = txtRepetitionSeam1End.Text;
+            dto.BacktackStartFreeSeamForward = txtStitchForwardFreeSeamFront.Text;
+            dto.BacktackStartFreeSeamBackward = txtStitchBackwardFreeSeamFront.Text;
+            dto.BacktackEndFreeSeamForward = txtStitchForwardFreeSeamEnd.Text;
+            dto.BacktackEndFreeSeamBackward = txtStitchBackwardFreeSeamEnd.Text;
 
-            dto.BacktackStartSeam2Forward = txtStitchForwardSeam2Front.Text;
-            dto.BacktackStartSeam2Backward = txtStitchBackwardSeam2Front.Text;
-            dto.BacktackStartSeam2Repetition = txtRepetitionSeam2Front.Text;
-            dto.BacktackEndSeam2Forward = txtStitchForwardSeam2End.Text;
-            dto.BacktackEndSeam2Backward = txtStitchBackwardSeam2End.Text;
-            dto.BacktackEndSeam2Repetition = txtRepetitionSeam2End.Text;
+            dto.BacktackStartSABSeamForward = txtStitchForwardSABSeamFront.Text;
+            dto.BacktackStartSABSeamBackward = txtStitchBackwardSABSeamFront.Text;
+            dto.BacktackEndSABSeamForward = txtStitchForwardSABSeamEnd.Text;
+            dto.BacktackEndSABSeamBackward = txtStitchBackwardSABSeamEnd.Text;
+
+            dto.BacktackStartEndlabelSeamForward = txtStitchForwardEndlabelSeamFront.Text;
+            dto.BacktackEndEndlabelSeamForward = txtStitchBackwardEndlabelSeamFront.Text;
+            dto.BacktackStartEndlabelSeamBackward = txtStitchForwardEndlabelSeamEnd.Text;
+            dto.BacktackEndEndlabelSeamBackward = txtStitchBackwardEndlabelSeamEnd.Text;
             OnDataChange.Invoke();
         }
 
@@ -91,25 +125,33 @@ namespace Clean.Win.AppUI.UserControls
             txtStopFilter.Text = dto.ThreadTensionSeam1StopFilter;
             txtStartMonitoring.Text = dto.ThreadTensionSeam1StartMonitoring;
 
-            txtStitchForwardSeam1Front.Text = dto.BacktackStartSeam1Forward;
-            txtStitchBackwardSeam1Front.Text = dto.BacktackStartSeam1Backward;
-            txtRepetitionSeam1Front.Text = dto.BacktackStartSeam1Repetition;
-            txtStitchForwardSeam1End.Text = dto.BacktackEndSeam1Forward;
-            txtStitchBackwardSeam1End.Text = dto.BacktackEndSeam1Backward;
-            txtRepetitionSeam1End.Text = dto.BacktackEndSeam1Repetition;
+            txtStitchForwardFreeSeamFront.Text = dto.BacktackStartFreeSeamForward;
+            txtStitchBackwardFreeSeamFront.Text = dto.BacktackStartFreeSeamBackward;
+            txtStitchForwardFreeSeamEnd.Text = dto.BacktackEndFreeSeamForward;
+            txtStitchBackwardFreeSeamEnd.Text = dto.BacktackEndFreeSeamBackward;
 
-            txtStitchForwardSeam2Front.Text = dto.BacktackStartSeam2Forward;
-            txtStitchBackwardSeam2Front.Text = dto.BacktackStartSeam2Backward;
-            txtRepetitionSeam2Front.Text = dto.BacktackStartSeam2Repetition;
-            txtStitchForwardSeam2End.Text = dto.BacktackEndSeam2Forward;
-            txtStitchBackwardSeam2End.Text = dto.BacktackEndSeam2Backward;
-            txtRepetitionSeam2End.Text = dto.BacktackEndSeam2Repetition;
+            txtStitchForwardSABSeamFront.Text = dto.BacktackStartSABSeamForward;
+            txtStitchBackwardSABSeamFront.Text = dto.BacktackStartSABSeamBackward;
+            txtStitchForwardSABSeamEnd.Text = dto.BacktackEndSABSeamForward;
+            txtStitchBackwardSABSeamEnd.Text = dto.BacktackEndSABSeamBackward;
+
+            txtStitchForwardEndlabelSeamFront.Text = dto.BacktackStartEndlabelSeamForward;
+            txtStitchBackwardEndlabelSeamFront.Text = dto.BacktackEndEndlabelSeamForward;
+            txtStitchForwardEndlabelSeamEnd.Text = dto.BacktackStartEndlabelSeamBackward;
+            txtStitchBackwardEndlabelSeamEnd.Text = dto.BacktackEndEndlabelSeamBackward;
+
+            if (dto.Automat != null)
+            {
+                AutomatDto automatDto = dto.Automat;
+                txtCriticalSection.Enabled = automatDto.AutoTolCrit;
+                txtNonCriticalSection.Enabled = automatDto.AutoTolNotCrit;
+            }
 
 
-            AutomatDto automatDto = dto.Automat;
-            txtCriticalSection.Enabled = automatDto.AutoTolCrit;
-            txtNonCriticalSection.Enabled = automatDto.AutoTolNotCrit;
-
+            checkBox1.Checked = dto.MonitoringFreeSeam != null && dto.MonitoringFreeSeam.Equals("1");
+            checkBox2.Checked = dto.MonitoringSeaction1 != null && dto.MonitoringSeaction1.Equals("1");
+            checkBox3.Checked = dto.MonitoringSeaction3 != null && dto.MonitoringSeaction3.Equals("1");
+            checkBox4.Checked = dto.MonitoringEndlabelSeam != null && dto.MonitoringEndlabelSeam.Equals("1");
 
         }
 

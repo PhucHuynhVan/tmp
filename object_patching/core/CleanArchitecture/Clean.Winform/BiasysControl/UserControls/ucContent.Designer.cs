@@ -58,7 +58,7 @@
             textBox19 = new TextBox();
             textBox13 = new TextBox();
             textBox18 = new TextBox();
-            textBox14 = new TextBox();
+            txtNoOfPiece = new TextBox();
             label25 = new Label();
             panel7 = new Panel();
             textBox12 = new TextBox();
@@ -119,6 +119,8 @@
             label26 = new Label();
             txtArticleInfo7 = new TextBox();
             label28 = new Label();
+            textBox20 = new TextBox();
+            label29 = new Label();
             pnlArticle.SuspendLayout();
             panel9.SuspendLayout();
             panel8.SuspendLayout();
@@ -338,12 +340,14 @@
             // panel10
             // 
             panel10.BorderStyle = BorderStyle.FixedSingle;
+            panel10.Controls.Add(textBox20);
+            panel10.Controls.Add(label29);
             panel10.Controls.Add(textBox19);
             panel10.Controls.Add(textBox13);
             panel10.Controls.Add(textBox18);
-            panel10.Controls.Add(textBox14);
+            panel10.Controls.Add(txtNoOfPiece);
             panel10.Controls.Add(label25);
-            panel10.Location = new Point(383, 587);
+            panel10.Location = new Point(96, 548);
             panel10.Name = "panel10";
             panel10.Size = new Size(427, 144);
             panel10.TabIndex = 36;
@@ -379,24 +383,24 @@
             textBox18.Text = "1";
             textBox18.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox14
+            // txtNoOfPiece
             // 
-            textBox14.BackColor = Color.Cornsilk;
-            textBox14.Location = new Point(310, 46);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(98, 27);
-            textBox14.TabIndex = 32;
-            textBox14.Text = "12234255756";
-            textBox14.TextAlign = HorizontalAlignment.Center;
+            txtNoOfPiece.BackColor = Color.Cornsilk;
+            txtNoOfPiece.Location = new Point(310, 46);
+            txtNoOfPiece.Name = "txtNoOfPiece";
+            txtNoOfPiece.Size = new Size(98, 27);
+            txtNoOfPiece.TabIndex = 32;
+            txtNoOfPiece.Text = "12234255756";
+            txtNoOfPiece.TextAlign = HorizontalAlignment.Center;
             // 
             // label25
             // 
             label25.AutoSize = true;
             label25.Location = new Point(310, 23);
             label25.Name = "label25";
-            label25.Size = new Size(99, 20);
+            label25.Size = new Size(93, 20);
             label25.TabIndex = 33;
-            label25.Text = "serial number";
+            label25.Text = "no. of pieces";
             // 
             // panel7
             // 
@@ -987,6 +991,25 @@
             label28.TabIndex = 41;
             label28.Text = "Article Info7";
             // 
+            // textBox20
+            // 
+            textBox20.BackColor = Color.Cornsilk;
+            textBox20.Location = new Point(310, 101);
+            textBox20.Name = "textBox20";
+            textBox20.Size = new Size(98, 27);
+            textBox20.TabIndex = 36;
+            textBox20.Text = "12234255756";
+            textBox20.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Location = new Point(310, 78);
+            label29.Name = "label29";
+            label29.Size = new Size(99, 20);
+            label29.TabIndex = 37;
+            label29.Text = "serial number";
+            // 
             // ucContent
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1143,5 +1166,8 @@
         private Label label26;
         private TextBox txtArticleInfo7;
         private Label label28;
+        private TextBox textBox20;
+        private Label label29;
+        private TextBox txtNoOfPiece;
     }
 }
