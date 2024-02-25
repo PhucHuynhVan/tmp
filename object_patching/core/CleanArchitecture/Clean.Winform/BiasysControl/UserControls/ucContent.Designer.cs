@@ -55,6 +55,8 @@
             textBox7 = new TextBox();
             textBox6 = new TextBox();
             panel10 = new Panel();
+            textBox20 = new TextBox();
+            label29 = new Label();
             textBox19 = new TextBox();
             textBox13 = new TextBox();
             textBox18 = new TextBox();
@@ -65,33 +67,19 @@
             label18 = new Label();
             textBox5 = new TextBox();
             panel5 = new Panel();
-            textBox4 = new TextBox();
+            txtBobbinThread = new TextBox();
             panel6 = new Panel();
             label17 = new Label();
             panel3 = new Panel();
             txtNeedleThread = new TextBox();
             panel4 = new Panel();
             label16 = new Label();
-            label15 = new Label();
-            txtPart5 = new TextBox();
-            label14 = new Label();
-            txtPart4 = new TextBox();
             label13 = new Label();
             txtPart3 = new TextBox();
             label12 = new Label();
             txtPart2 = new TextBox();
             label11 = new Label();
             txtPart1 = new TextBox();
-            label10 = new Label();
-            txtArticleInfo5 = new TextBox();
-            label9 = new Label();
-            txtArticleInfo4 = new TextBox();
-            label8 = new Label();
-            txtArticleInfo3 = new TextBox();
-            label7 = new Label();
-            txtArticleInfo2 = new TextBox();
-            label6 = new Label();
-            txtArticleInfo1 = new TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
             label1 = new Label();
@@ -115,12 +103,38 @@
             label27 = new Label();
             panel12 = new Panel();
             chartThreadTension = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            txtArticleInfo6 = new TextBox();
+            txtArticleInfo2 = new TextBox();
+            txtArticleInfo5 = new TextBox();
+            label10 = new Label();
+            txtArticleInfo4 = new TextBox();
+            txtArticleInfo1 = new TextBox();
+            txtArticleInfo3 = new TextBox();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            txtPart4 = new TextBox();
+            txtPart5 = new TextBox();
+            label14 = new Label();
+            label15 = new Label();
             label26 = new Label();
-            txtArticleInfo7 = new TextBox();
+            textBox14 = new TextBox();
             label28 = new Label();
-            textBox20 = new TextBox();
-            label29 = new Label();
+            textBox21 = new TextBox();
+            label31 = new Label();
+            label32 = new Label();
+            label33 = new Label();
+            label34 = new Label();
+            label35 = new Label();
+            label36 = new Label();
+            label37 = new Label();
+            textBox4 = new TextBox();
+            textBox24 = new TextBox();
+            textBox25 = new TextBox();
+            textBox26 = new TextBox();
+            textBox28 = new TextBox();
+            textBox27 = new TextBox();
+            panel16 = new Panel();
             pnlArticle.SuspendLayout();
             panel9.SuspendLayout();
             panel8.SuspendLayout();
@@ -137,6 +151,7 @@
             panel14.SuspendLayout();
             panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartThreadTension).BeginInit();
+            panel16.SuspendLayout();
             SuspendLayout();
             // 
             // pnlArticle
@@ -347,40 +362,57 @@
             panel10.Controls.Add(textBox18);
             panel10.Controls.Add(txtNoOfPiece);
             panel10.Controls.Add(label25);
-            panel10.Location = new Point(96, 548);
+            panel10.Location = new Point(125, 475);
             panel10.Name = "panel10";
-            panel10.Size = new Size(427, 144);
+            panel10.Size = new Size(427, 142);
             panel10.TabIndex = 36;
+            // 
+            // textBox20
+            // 
+            textBox20.BackColor = Color.Cornsilk;
+            textBox20.Location = new Point(310, 101);
+            textBox20.Name = "textBox20";
+            textBox20.Size = new Size(98, 27);
+            textBox20.TabIndex = 36;
+            textBox20.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Location = new Point(310, 78);
+            label29.Name = "label29";
+            label29.Size = new Size(99, 20);
+            label29.TabIndex = 37;
+            label29.Text = "serial number";
             // 
             // textBox19
             // 
             textBox19.BackColor = Color.Cornsilk;
-            textBox19.Location = new Point(84, 3);
+            textBox19.Location = new Point(80, 16);
             textBox19.Name = "textBox19";
-            textBox19.Size = new Size(51, 27);
+            textBox19.Size = new Size(64, 27);
             textBox19.TabIndex = 35;
-            textBox19.Text = "3";
+            textBox19.Text = "11";
             textBox19.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox13
             // 
-            textBox13.BackColor = Color.Lime;
-            textBox13.Location = new Point(109, 72);
+            textBox13.BackColor = Color.Cornsilk;
+            textBox13.Location = new Point(97, 86);
             textBox13.Multiline = true;
             textBox13.Name = "textBox13";
             textBox13.Size = new Size(195, 41);
             textBox13.TabIndex = 31;
-            textBox13.Text = "12234255756534543553534";
             textBox13.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox18
             // 
             textBox18.BackColor = Color.Cornsilk;
-            textBox18.Location = new Point(40, 86);
+            textBox18.Location = new Point(17, 97);
             textBox18.Name = "textBox18";
-            textBox18.Size = new Size(51, 27);
+            textBox18.Size = new Size(73, 27);
             textBox18.TabIndex = 34;
-            textBox18.Text = "1";
+            textBox18.Text = "0";
             textBox18.TextAlign = HorizontalAlignment.Center;
             // 
             // txtNoOfPiece
@@ -390,7 +422,6 @@
             txtNoOfPiece.Name = "txtNoOfPiece";
             txtNoOfPiece.Size = new Size(98, 27);
             txtNoOfPiece.TabIndex = 32;
-            txtNoOfPiece.Text = "12234255756";
             txtNoOfPiece.TextAlign = HorizontalAlignment.Center;
             // 
             // label25
@@ -409,25 +440,24 @@
             panel7.Controls.Add(textBox12);
             panel7.Controls.Add(label18);
             panel7.Controls.Add(textBox5);
-            panel7.Location = new Point(383, 737);
+            panel7.Location = new Point(153, 664);
             panel7.Name = "panel7";
-            panel7.Size = new Size(394, 77);
+            panel7.Size = new Size(399, 66);
             panel7.TabIndex = 28;
             // 
             // textBox12
             // 
             textBox12.BackColor = Color.Cornsilk;
-            textBox12.Location = new Point(87, 33);
+            textBox12.Location = new Point(93, 33);
             textBox12.Name = "textBox12";
             textBox12.Size = new Size(52, 27);
             textBox12.TabIndex = 8;
-            textBox12.Text = "12234255756";
             textBox12.TextAlign = HorizontalAlignment.Center;
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(87, 10);
+            label18.Location = new Point(93, 10);
             label18.Name = "label18";
             label18.Size = new Size(104, 20);
             label18.TabIndex = 0;
@@ -436,33 +466,31 @@
             // textBox5
             // 
             textBox5.BackColor = Color.Cornsilk;
-            textBox5.Location = new Point(145, 33);
+            textBox5.Location = new Point(151, 33);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(233, 27);
             textBox5.TabIndex = 7;
-            textBox5.Text = "12234255756";
             textBox5.TextAlign = HorizontalAlignment.Center;
             // 
             // panel5
             // 
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel5.BorderStyle = BorderStyle.FixedSingle;
-            panel5.Controls.Add(textBox4);
+            panel5.Controls.Add(txtBobbinThread);
             panel5.Controls.Add(panel6);
             panel5.Location = new Point(768, 185);
             panel5.Name = "panel5";
             panel5.Size = new Size(283, 157);
             panel5.TabIndex = 27;
             // 
-            // textBox4
+            // txtBobbinThread
             // 
-            textBox4.BackColor = Color.Cornsilk;
-            textBox4.Location = new Point(-1, 33);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(282, 27);
-            textBox4.TabIndex = 8;
-            textBox4.Text = "12234255756";
-            textBox4.TextAlign = HorizontalAlignment.Center;
+            txtBobbinThread.BackColor = Color.Cornsilk;
+            txtBobbinThread.Location = new Point(-1, 33);
+            txtBobbinThread.Name = "txtBobbinThread";
+            txtBobbinThread.Size = new Size(282, 27);
+            txtBobbinThread.TabIndex = 8;
+            txtBobbinThread.TextAlign = HorizontalAlignment.Center;
             // 
             // panel6
             // 
@@ -501,7 +529,6 @@
             txtNeedleThread.Name = "txtNeedleThread";
             txtNeedleThread.Size = new Size(281, 27);
             txtNeedleThread.TabIndex = 7;
-            txtNeedleThread.Text = "12234255756";
             txtNeedleThread.TextAlign = HorizontalAlignment.Center;
             // 
             // panel4
@@ -523,59 +550,21 @@
             label16.TabIndex = 0;
             label16.Text = "needle thread";
             // 
-            // label15
-            // 
-            label15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label15.AutoSize = true;
-            label15.Location = new Point(573, 467);
-            label15.Name = "label15";
-            label15.Size = new Size(142, 20);
-            label15.TabIndex = 25;
-            label15.Text = "Part5 Scanned Label";
-            // 
-            // txtPart5
-            // 
-            txtPart5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtPart5.BackColor = Color.Cornsilk;
-            txtPart5.Location = new Point(717, 465);
-            txtPart5.Name = "txtPart5";
-            txtPart5.Size = new Size(405, 27);
-            txtPart5.TabIndex = 24;
-            // 
-            // label14
-            // 
-            label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label14.AutoSize = true;
-            label14.Location = new Point(573, 440);
-            label14.Name = "label14";
-            label14.Size = new Size(142, 20);
-            label14.TabIndex = 23;
-            label14.Text = "Part4 Scanned Label";
-            // 
-            // txtPart4
-            // 
-            txtPart4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtPart4.BackColor = Color.Cornsilk;
-            txtPart4.Location = new Point(717, 438);
-            txtPart4.Name = "txtPart4";
-            txtPart4.Size = new Size(405, 27);
-            txtPart4.TabIndex = 22;
-            // 
             // label13
             // 
             label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label13.AutoSize = true;
-            label13.Location = new Point(573, 413);
+            label13.Location = new Point(578, 543);
             label13.Name = "label13";
-            label13.Size = new Size(142, 20);
+            label13.Size = new Size(52, 20);
             label13.TabIndex = 21;
-            label13.Text = "Part3 Scanned Label";
+            label13.Text = "Parts 3";
             // 
             // txtPart3
             // 
             txtPart3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtPart3.BackColor = Color.Cornsilk;
-            txtPart3.Location = new Point(717, 411);
+            txtPart3.Location = new Point(722, 541);
             txtPart3.Name = "txtPart3";
             txtPart3.Size = new Size(405, 27);
             txtPart3.TabIndex = 20;
@@ -584,17 +573,17 @@
             // 
             label12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label12.AutoSize = true;
-            label12.Location = new Point(573, 386);
+            label12.Location = new Point(578, 516);
             label12.Name = "label12";
-            label12.Size = new Size(142, 20);
+            label12.Size = new Size(52, 20);
             label12.TabIndex = 19;
-            label12.Text = "Part2 Scanned Label";
+            label12.Text = "Parts 2";
             // 
             // txtPart2
             // 
             txtPart2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtPart2.BackColor = Color.Cornsilk;
-            txtPart2.Location = new Point(717, 384);
+            txtPart2.Location = new Point(722, 514);
             txtPart2.Name = "txtPart2";
             txtPart2.Size = new Size(405, 27);
             txtPart2.TabIndex = 18;
@@ -603,115 +592,20 @@
             // 
             label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label11.AutoSize = true;
-            label11.Location = new Point(573, 359);
+            label11.Location = new Point(578, 489);
             label11.Name = "label11";
-            label11.Size = new Size(142, 20);
+            label11.Size = new Size(52, 20);
             label11.TabIndex = 17;
-            label11.Text = "Part1 Scanned Label";
+            label11.Text = "Parts 1";
             // 
             // txtPart1
             // 
             txtPart1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtPart1.BackColor = Color.Cornsilk;
-            txtPart1.Location = new Point(717, 357);
+            txtPart1.Location = new Point(722, 487);
             txtPart1.Name = "txtPart1";
             txtPart1.Size = new Size(405, 27);
             txtPart1.TabIndex = 16;
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label10.AutoSize = true;
-            label10.Location = new Point(573, 602);
-            label10.Name = "label10";
-            label10.Size = new Size(90, 20);
-            label10.TabIndex = 15;
-            label10.Text = "Article Info5";
-            // 
-            // txtArticleInfo5
-            // 
-            txtArticleInfo5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtArticleInfo5.BackColor = Color.Cornsilk;
-            txtArticleInfo5.Location = new Point(717, 600);
-            txtArticleInfo5.Name = "txtArticleInfo5";
-            txtArticleInfo5.Size = new Size(405, 27);
-            txtArticleInfo5.TabIndex = 14;
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label9.AutoSize = true;
-            label9.Location = new Point(573, 575);
-            label9.Name = "label9";
-            label9.Size = new Size(90, 20);
-            label9.TabIndex = 13;
-            label9.Text = "Article Info4";
-            // 
-            // txtArticleInfo4
-            // 
-            txtArticleInfo4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtArticleInfo4.BackColor = Color.Cornsilk;
-            txtArticleInfo4.Location = new Point(717, 573);
-            txtArticleInfo4.Name = "txtArticleInfo4";
-            txtArticleInfo4.Size = new Size(405, 27);
-            txtArticleInfo4.TabIndex = 12;
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label8.AutoSize = true;
-            label8.Location = new Point(573, 548);
-            label8.Name = "label8";
-            label8.Size = new Size(90, 20);
-            label8.TabIndex = 11;
-            label8.Text = "Article Info3";
-            // 
-            // txtArticleInfo3
-            // 
-            txtArticleInfo3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtArticleInfo3.BackColor = Color.Cornsilk;
-            txtArticleInfo3.Location = new Point(717, 546);
-            txtArticleInfo3.Name = "txtArticleInfo3";
-            txtArticleInfo3.Size = new Size(405, 27);
-            txtArticleInfo3.TabIndex = 10;
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.Location = new Point(573, 521);
-            label7.Name = "label7";
-            label7.Size = new Size(90, 20);
-            label7.TabIndex = 9;
-            label7.Text = "Article Info2";
-            // 
-            // txtArticleInfo2
-            // 
-            txtArticleInfo2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtArticleInfo2.BackColor = Color.Cornsilk;
-            txtArticleInfo2.Location = new Point(717, 519);
-            txtArticleInfo2.Name = "txtArticleInfo2";
-            txtArticleInfo2.Size = new Size(405, 27);
-            txtArticleInfo2.TabIndex = 8;
-            // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label6.AutoSize = true;
-            label6.Location = new Point(573, 494);
-            label6.Name = "label6";
-            label6.Size = new Size(90, 20);
-            label6.TabIndex = 7;
-            label6.Text = "Article Info1";
-            // 
-            // txtArticleInfo1
-            // 
-            txtArticleInfo1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtArticleInfo1.BackColor = Color.Cornsilk;
-            txtArticleInfo1.Location = new Point(717, 492);
-            txtArticleInfo1.Name = "txtArticleInfo1";
-            txtArticleInfo1.Size = new Size(405, 27);
-            txtArticleInfo1.TabIndex = 6;
             // 
             // panel1
             // 
@@ -953,62 +847,314 @@
             title1.Text = "Thread Tension";
             chartThreadTension.Titles.Add(title1);
             // 
-            // txtArticleInfo6
+            // txtArticleInfo2
             // 
-            txtArticleInfo6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtArticleInfo6.BackColor = Color.Cornsilk;
-            txtArticleInfo6.Location = new Point(717, 627);
-            txtArticleInfo6.Name = "txtArticleInfo6";
-            txtArticleInfo6.Size = new Size(405, 27);
-            txtArticleInfo6.TabIndex = 38;
+            txtArticleInfo2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtArticleInfo2.BackColor = Color.Cornsilk;
+            txtArticleInfo2.Location = new Point(722, 379);
+            txtArticleInfo2.Name = "txtArticleInfo2";
+            txtArticleInfo2.Size = new Size(405, 27);
+            txtArticleInfo2.TabIndex = 8;
+            // 
+            // txtArticleInfo5
+            // 
+            txtArticleInfo5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtArticleInfo5.BackColor = Color.Cornsilk;
+            txtArticleInfo5.Location = new Point(722, 460);
+            txtArticleInfo5.Name = "txtArticleInfo5";
+            txtArticleInfo5.Size = new Size(405, 27);
+            txtArticleInfo5.TabIndex = 14;
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label10.AutoSize = true;
+            label10.Location = new Point(578, 462);
+            label10.Name = "label10";
+            label10.Size = new Size(90, 20);
+            label10.TabIndex = 15;
+            label10.Text = "Article Info5";
+            // 
+            // txtArticleInfo4
+            // 
+            txtArticleInfo4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtArticleInfo4.BackColor = Color.Cornsilk;
+            txtArticleInfo4.Location = new Point(722, 433);
+            txtArticleInfo4.Name = "txtArticleInfo4";
+            txtArticleInfo4.Size = new Size(405, 27);
+            txtArticleInfo4.TabIndex = 12;
+            // 
+            // txtArticleInfo1
+            // 
+            txtArticleInfo1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtArticleInfo1.BackColor = Color.Cornsilk;
+            txtArticleInfo1.Location = new Point(722, 352);
+            txtArticleInfo1.Name = "txtArticleInfo1";
+            txtArticleInfo1.Size = new Size(405, 27);
+            txtArticleInfo1.TabIndex = 6;
+            // 
+            // txtArticleInfo3
+            // 
+            txtArticleInfo3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtArticleInfo3.BackColor = Color.Cornsilk;
+            txtArticleInfo3.Location = new Point(722, 406);
+            txtArticleInfo3.Name = "txtArticleInfo3";
+            txtArticleInfo3.Size = new Size(405, 27);
+            txtArticleInfo3.TabIndex = 10;
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label9.AutoSize = true;
+            label9.Location = new Point(578, 435);
+            label9.Name = "label9";
+            label9.Size = new Size(90, 20);
+            label9.TabIndex = 13;
+            label9.Text = "Article Info4";
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label8.AutoSize = true;
+            label8.Location = new Point(578, 408);
+            label8.Name = "label8";
+            label8.Size = new Size(90, 20);
+            label8.TabIndex = 11;
+            label8.Text = "Article Info3";
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Location = new Point(578, 381);
+            label7.Name = "label7";
+            label7.Size = new Size(90, 20);
+            label7.TabIndex = 9;
+            label7.Text = "Article Info2";
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Location = new Point(578, 354);
+            label6.Name = "label6";
+            label6.Size = new Size(90, 20);
+            label6.TabIndex = 7;
+            label6.Text = "Article Info1";
+            // 
+            // txtPart4
+            // 
+            txtPart4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtPart4.BackColor = Color.Cornsilk;
+            txtPart4.Location = new Point(722, 568);
+            txtPart4.Name = "txtPart4";
+            txtPart4.Size = new Size(405, 27);
+            txtPart4.TabIndex = 22;
+            // 
+            // txtPart5
+            // 
+            txtPart5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtPart5.BackColor = Color.Cornsilk;
+            txtPart5.Location = new Point(722, 595);
+            txtPart5.Name = "txtPart5";
+            txtPart5.Size = new Size(405, 27);
+            txtPart5.TabIndex = 24;
+            // 
+            // label14
+            // 
+            label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label14.AutoSize = true;
+            label14.Location = new Point(578, 570);
+            label14.Name = "label14";
+            label14.Size = new Size(52, 20);
+            label14.TabIndex = 23;
+            label14.Text = "Parts 4";
+            // 
+            // label15
+            // 
+            label15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label15.AutoSize = true;
+            label15.Location = new Point(578, 597);
+            label15.Name = "label15";
+            label15.Size = new Size(52, 20);
+            label15.TabIndex = 25;
+            label15.Text = "Parts 5";
             // 
             // label26
             // 
             label26.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label26.AutoSize = true;
-            label26.Location = new Point(573, 629);
+            label26.Location = new Point(578, 651);
             label26.Name = "label26";
-            label26.Size = new Size(90, 20);
-            label26.TabIndex = 39;
-            label26.Text = "Article Info6";
+            label26.Size = new Size(52, 20);
+            label26.TabIndex = 41;
+            label26.Text = "Parts 5";
             // 
-            // txtArticleInfo7
+            // textBox14
             // 
-            txtArticleInfo7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtArticleInfo7.BackColor = Color.Cornsilk;
-            txtArticleInfo7.Location = new Point(717, 654);
-            txtArticleInfo7.Name = "txtArticleInfo7";
-            txtArticleInfo7.Size = new Size(405, 27);
-            txtArticleInfo7.TabIndex = 40;
+            textBox14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            textBox14.BackColor = Color.Cornsilk;
+            textBox14.Location = new Point(722, 649);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(405, 27);
+            textBox14.TabIndex = 40;
             // 
             // label28
             // 
             label28.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label28.AutoSize = true;
-            label28.Location = new Point(573, 656);
+            label28.Location = new Point(578, 624);
             label28.Name = "label28";
-            label28.Size = new Size(90, 20);
-            label28.TabIndex = 41;
-            label28.Text = "Article Info7";
+            label28.Size = new Size(52, 20);
+            label28.TabIndex = 39;
+            label28.Text = "Parts 4";
             // 
-            // textBox20
+            // textBox21
             // 
-            textBox20.BackColor = Color.Cornsilk;
-            textBox20.Location = new Point(310, 101);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(98, 27);
-            textBox20.TabIndex = 36;
-            textBox20.Text = "12234255756";
-            textBox20.TextAlign = HorizontalAlignment.Center;
+            textBox21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            textBox21.BackColor = Color.Cornsilk;
+            textBox21.Location = new Point(722, 622);
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(405, 27);
+            textBox21.TabIndex = 38;
             // 
-            // label29
+            // label31
             // 
-            label29.AutoSize = true;
-            label29.Location = new Point(310, 78);
-            label29.Name = "label29";
-            label29.Size = new Size(99, 20);
-            label29.TabIndex = 37;
-            label29.Text = "serial number";
+            label31.AutoSize = true;
+            label31.Location = new Point(17, 10);
+            label31.Name = "label31";
+            label31.Size = new Size(101, 20);
+            label31.TabIndex = 9;
+            label31.Text = "needle thread";
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Location = new Point(119, 9);
+            label32.Name = "label32";
+            label32.Size = new Size(96, 20);
+            label32.TabIndex = 44;
+            label32.Text = "tension value";
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Location = new Point(100, 39);
+            label33.Name = "label33";
+            label33.Size = new Size(17, 20);
+            label33.TabIndex = 45;
+            label33.Text = "1";
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new Point(191, 39);
+            label34.Name = "label34";
+            label34.Size = new Size(17, 20);
+            label34.TabIndex = 46;
+            label34.Text = "2";
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Location = new Point(6, 61);
+            label35.Name = "label35";
+            label35.Size = new Size(62, 20);
+            label35.TabIndex = 47;
+            label35.Text = "average";
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Location = new Point(32, 91);
+            label36.Name = "label36";
+            label36.Size = new Size(34, 20);
+            label36.TabIndex = 48;
+            label36.Text = "Min";
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.Location = new Point(30, 115);
+            label37.Name = "label37";
+            label37.Size = new Size(37, 20);
+            label37.TabIndex = 49;
+            label37.Text = "Max";
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.Cornsilk;
+            textBox4.Location = new Point(74, 62);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(64, 27);
+            textBox4.TabIndex = 38;
+            textBox4.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox24
+            // 
+            textBox24.BackColor = Color.Cornsilk;
+            textBox24.Location = new Point(144, 61);
+            textBox24.Name = "textBox24";
+            textBox24.Size = new Size(64, 27);
+            textBox24.TabIndex = 50;
+            textBox24.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox25
+            // 
+            textBox25.BackColor = Color.Cornsilk;
+            textBox25.Location = new Point(144, 88);
+            textBox25.Name = "textBox25";
+            textBox25.Size = new Size(64, 27);
+            textBox25.TabIndex = 52;
+            textBox25.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox26
+            // 
+            textBox26.BackColor = Color.Cornsilk;
+            textBox26.Location = new Point(74, 89);
+            textBox26.Name = "textBox26";
+            textBox26.Size = new Size(64, 27);
+            textBox26.TabIndex = 51;
+            textBox26.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox28
+            // 
+            textBox28.BackColor = Color.Cornsilk;
+            textBox28.Location = new Point(74, 116);
+            textBox28.Name = "textBox28";
+            textBox28.Size = new Size(64, 27);
+            textBox28.TabIndex = 55;
+            textBox28.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox27
+            // 
+            textBox27.BackColor = Color.Cornsilk;
+            textBox27.Location = new Point(144, 115);
+            textBox27.Name = "textBox27";
+            textBox27.Size = new Size(64, 27);
+            textBox27.TabIndex = 55;
+            textBox27.TextAlign = HorizontalAlignment.Center;
+            // 
+            // panel16
+            // 
+            panel16.BorderStyle = BorderStyle.FixedSingle;
+            panel16.Controls.Add(label31);
+            panel16.Controls.Add(label32);
+            panel16.Controls.Add(textBox27);
+            panel16.Controls.Add(label33);
+            panel16.Controls.Add(textBox28);
+            panel16.Controls.Add(label34);
+            panel16.Controls.Add(textBox25);
+            panel16.Controls.Add(label35);
+            panel16.Controls.Add(textBox26);
+            panel16.Controls.Add(label36);
+            panel16.Controls.Add(textBox24);
+            panel16.Controls.Add(label37);
+            panel16.Controls.Add(textBox4);
+            panel16.Location = new Point(587, 475);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(250, 149);
+            panel16.TabIndex = 56;
             // 
             // ucContent
             // 
@@ -1016,10 +1162,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             BorderStyle = BorderStyle.FixedSingle;
-            Controls.Add(txtArticleInfo7);
-            Controls.Add(label28);
-            Controls.Add(txtArticleInfo6);
+            Controls.Add(panel16);
             Controls.Add(label26);
+            Controls.Add(textBox14);
+            Controls.Add(label28);
+            Controls.Add(textBox21);
             Controls.Add(panel7);
             Controls.Add(panel12);
             Controls.Add(panel10);
@@ -1076,6 +1223,8 @@
             panel14.PerformLayout();
             panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chartThreadTension).EndInit();
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1098,32 +1247,18 @@
         private Label label4;
         private TextBox textBox3;
         private Label label5;
-        private Label label14;
-        private TextBox txtPart4;
         private Label label13;
         private TextBox txtPart3;
         private Label label12;
         private TextBox txtPart2;
         private Label label11;
         private TextBox txtPart1;
-        private Label label10;
-        private TextBox txtArticleInfo5;
-        private Label label9;
-        private TextBox txtArticleInfo4;
-        private Label label8;
-        private TextBox txtArticleInfo3;
-        private Label label7;
-        private TextBox txtArticleInfo2;
-        private Label label6;
-        private TextBox txtArticleInfo1;
         private Panel panel5;
         private Panel panel6;
         private Label label17;
         private Panel panel3;
         private Panel panel4;
         private Label label16;
-        private Label label15;
-        private TextBox txtPart5;
         private Panel panel7;
         private TextBox textBox5;
         private Label label18;
@@ -1162,12 +1297,44 @@
         private Label label27;
         private Panel panel12;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartThreadTension;
-        private TextBox txtArticleInfo6;
-        private Label label26;
-        private TextBox txtArticleInfo7;
-        private Label label28;
         private TextBox textBox20;
         private Label label29;
         private TextBox txtNoOfPiece;
+        private TextBox txtArticleInfo2;
+        private TextBox txtArticleInfo5;
+        private Label label10;
+        private TextBox txtArticleInfo4;
+        private TextBox txtArticleInfo1;
+        private TextBox txtArticleInfo3;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private TextBox txtPart4;
+        private TextBox txtPart5;
+        private Label label14;
+        private Label label15;
+        private Label label26;
+        private Label label28;
+        private TextBox textBox21;
+        private TextBox txtBobbinThread;
+        private TextBox textBox22;
+        private Label lblLastSeam;
+        private TextBox textBox23;
+        private Button button1;
+        private Label label31;
+        private Label label32;
+        private Label label33;
+        private Label label34;
+        private Label label35;
+        private Label label36;
+        private Label label37;
+        private TextBox textBox24;
+        private TextBox textBox25;
+        private TextBox textBox26;
+        private TextBox textBox28;
+        private TextBox textBox27;
+        private Panel panel15;
+        private Panel panel16;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace BiasysControl.UserControls
+﻿using BiasysControl.UICommon;
+
+namespace BiasysControl.UserControls
 {
     public partial class ucContent : UserControl
     {
@@ -7,6 +9,7 @@
         {
             _mainForm = mainForm;
             InitializeComponent();
+            txtUser.Text = UIUtility.userLogin;
         }
     }
 }

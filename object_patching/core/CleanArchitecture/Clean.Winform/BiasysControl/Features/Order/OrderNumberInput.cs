@@ -40,20 +40,24 @@ namespace BiasysControl.Features.Order
             DoClosingForm();
         }
 
-        
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             var ucContent = uiCommon.FindControlByName(_mainForm.pnlRightContent, "ucContent");
-            
+
             if (this.txtOrderNumber.Visible)
             {
-                
+                _mainForm.UpdateMassageHeader("enter/scan part", "");
                 if (ucContent != null)
                 {
                     var nameOfControl = string.Concat("txtArticleInfo", countArticlePartNumber.ToString());
                     String articleCode = txtOrderNumber.Text;
                     this._mainForm.updateArticleInfo(articleCode, this);
 
+                    if(article == null)
+                    {
+                        return;
+                    }
                     //int partCount = 0;
                     parts.Add(article.FabricLeather1MaterialCode);
                     parts.Add(article.FabricLeather2MaterialCode);
@@ -61,8 +65,10 @@ namespace BiasysControl.Features.Order
                     parts.Add(article.FabricLeather4MaterialCode);
                     parts.Add(article.FabricLeather5MaterialCode);
 
-                    for(int i = 0; i < parts.Count; i++) {
-                        if (parts[i] != null) {
+                    for (int i = 0; i < parts.Count; i++)
+                    {
+                        if (parts[i] != null)
+                        {
                             lastPartIdx = i;
                         }
                     }
@@ -71,7 +77,7 @@ namespace BiasysControl.Features.Order
                     SetArticlePartNumberValue(ucContent, nameOfControl, articleCode);
 
                     //this.Text = "Part number";
-                    this.lblBobbinNumber.Text = "Enter/scan part";
+                    this.lblBobbinNumber.Text = "enter/scan part";
                     this.txtPartNumber.Text = string.Empty;
                     this.txtPartNumber.Visible = true;
                     this.txtOrderNumber.Visible = false;
@@ -92,12 +98,12 @@ namespace BiasysControl.Features.Order
             }
             else
             {
-                if(!numOfPiece)
+                if (!numOfPiece)
                 {
                     //this.lblBobbinNumber.Text = "enter/scan part";
                     // find next available part
                     int i = currentPartIdx;
-                    for(; i< parts.Count; i++)
+                    for (; i < parts.Count; i++)
                     {
                         if (parts[i] != null)
                         {
@@ -107,20 +113,21 @@ namespace BiasysControl.Features.Order
                     }
                     if (ucContent != null)
                     {
-                        var nameOfControl = string.Concat("txtPart", (i+1).ToString());
+                        var nameOfControl = string.Concat("txtPart", (i + 1).ToString());
                         SetArticlePartNumberValue(ucContent, nameOfControl, txtPartNumber.Text);
                     }
                     this.txtPartNumber.Text = string.Empty;
-                    if(i == lastPartIdx)
+                    if (i == lastPartIdx)
                     {
                         numOfPiece = true;
                         _mainForm.EnableMainButtons(true);
-                        _mainForm.UpdateMassageHeader("Too many stitches", "Press Machine Button Reset and Cancel Sewing");
                         this.lblBobbinNumber.Text = "Please enter the number of pieces.";
                     }
-                } else
+                }
+                else
                 {
-                    SetArticlePartNumberValue(ucContent, "txtNoOfPiece", txtPartNumber.Text);
+                    _mainForm.UpdateMassageHeader("Sewing", "");
+                    SetArticlePartNumberValue(ucContent, "txtNoOfPiece", "0/"+txtPartNumber.Text);
                     this.Close();
                 }
 
@@ -143,7 +150,7 @@ namespace BiasysControl.Features.Order
 
 
         private void SetArticlePartNumberValue(Control ucContent, string nameofControl, string value)
-        {            
+        {
             var txtArticlePartControl = uiCommon.FindControlByName(ucContent, nameofControl) as TextBox;
             if (txtArticlePartControl != null)
             {
@@ -173,6 +180,8 @@ namespace BiasysControl.Features.Order
         {
             this.txtOrderNumber.Focus();
             countArticlePartNumber++;
+
+            _mainForm.UpdateMassageHeader("Scan Order or Family", "");
         }
 
         private int GetPartNumberMockData()

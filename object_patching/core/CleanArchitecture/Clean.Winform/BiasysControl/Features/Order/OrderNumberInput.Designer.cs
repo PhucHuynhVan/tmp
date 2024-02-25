@@ -104,7 +104,7 @@
             lblBobbinNumber.Name = "lblBobbinNumber";
             lblBobbinNumber.Size = new Size(273, 20);
             lblBobbinNumber.TabIndex = 9;
-            lblBobbinNumber.Text = "Enter/scan order number or family code";
+            lblBobbinNumber.Text = "enter/scan order number or family code";
             // 
             // btn5
             // 

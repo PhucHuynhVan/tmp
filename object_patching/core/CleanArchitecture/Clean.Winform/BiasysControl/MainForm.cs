@@ -156,7 +156,21 @@ namespace BiasysControl
             var articles = await _articleQueryService.ListAllAsync();
             if (!articles.IsNullOrEmpty())
             {
-                ArticleDto articleDto = articles[0];
+                ArticleDto articleDto = null;
+                for (int i = 0; i< articles.Count; i++)
+                {
+                    if (articles[i].Code.Equals(articleCode, StringComparison.OrdinalIgnoreCase))
+                    {
+                        articleDto = articles[i];
+                        break;
+                    }
+                }
+
+                if(articleDto == null)
+                {
+                    MessageBox.Show("Article Not Found " + articleCode);
+                    return;
+                }
                 String code = articleDto.Code;
                 String automat = articleDto.Automat.Code;
                 String needleThread = articleDto.UpperThreadMaterialCode;
@@ -168,10 +182,28 @@ namespace BiasysControl
                 if (ucContent != null)
                 {
 
+                    var txtArticleCode = uiCommon.FindControlByName(ucContent, "txtArticleCode") as TextBox;
+                    if (txtArticleCode != null)
+                    {
+                        txtArticleCode.Text = code;
+                    }
+
                     var txtAutomat = uiCommon.FindControlByName(ucContent, "txtAutomat") as TextBox;
                     if (txtAutomat != null)
                     {
                         txtAutomat.Text = automat;
+                    }
+
+                    var txtNeedleThread = uiCommon.FindControlByName(ucContent, "txtNeedleThread") as TextBox;
+                    if (txtNeedleThread != null)
+                    {
+                        txtNeedleThread.Text = needleThread;
+                    }
+
+                    var txtBobbinThread = uiCommon.FindControlByName(ucContent, "txtBobbinThread") as TextBox;
+                    if (txtBobbinThread != null)
+                    {
+                        txtBobbinThread.Text = bobbinThread;
                     }
 
                     orderNumberInput.article = articleDto;
